@@ -236,3 +236,148 @@ export function BiosensorDeviceVisualizer() {
     </div>
   );
 }
+
+/* Gain-Scheduled All-Digital PLL (GS-ADPLL) Architecture Visualizer */
+export function AdpllArchitectureVisualizer() {
+  return (
+    <div style={{ background: '#091522', border: '1px solid rgba(212, 175, 55, 0.3)', borderRadius: 'var(--radius-md)', padding: '1.5rem', marginBlock: '1.5rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '0.5rem' }}>
+        <span className="text-mono" style={{ fontSize: '0.75rem', color: '#d4af37', textTransform: 'uppercase' }}>
+          GS-ADPLL Dual-Mode Loop Architecture (Verilog RTL / OpenROAD Flow)
+        </span>
+        <span className="text-mono" style={{ fontSize: '0.7rem', color: '#BFC8D0', opacity: 0.7 }}>
+          Simulated Microarchitecture
+        </span>
+      </div>
+
+      <svg viewBox="0 0 740 210" width="100%" height="auto" aria-label="ADPLL block diagram and gain scheduling loop filter">
+        <defs>
+          <pattern id="adpllGrid" width="20" height="20" patternUnits="userSpaceOnUse">
+            <path d="M 20 0 L 0 0 0 20" fill="none" stroke="rgba(255,255,255,0.03)" strokeWidth="1" />
+          </pattern>
+        </defs>
+        <rect width="740" height="210" fill="url(#adpllGrid)" rx="6" />
+
+        {/* Input Reference Clock */}
+        <text x="25" y="65" fill="#f4f5f6" fontSize="10" fontFamily="monospace">f_ref</text>
+        <line x1="60" y1="60" x2="100" y2="60" stroke="#d4af37" strokeWidth="2" markerEnd="url(#arrow)" />
+
+        {/* Phase/Frequency Detector & TDC */}
+        <g transform="translate(100, 30)">
+          <rect width="110" height="60" fill="#142132" stroke="#2E7BFF" strokeWidth="1.5" rx="4" />
+          <text x="55" y="26" fill="#fff" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">PFD / TDC</text>
+          <text x="55" y="44" fill="#9aa4b2" fontSize="8" fontFamily="monospace" textAnchor="middle">Phase Detector</text>
+        </g>
+        <line x1="210" y1="60" x2="260" y2="60" stroke="#d4af37" strokeWidth="2" />
+
+        {/* Gain-Scheduled Digital Loop Filter (DLF) */}
+        <g transform="translate(260, 20)">
+          <rect width="170" height="80" fill="#1b2a3d" stroke="#d4af37" strokeWidth="1.8" rx="6" />
+          <text x="85" y="24" fill="#d4af37" fontSize="11" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">GAIN-SCHEDULED DLF</text>
+          <rect x="15" y="36" width="140" height="18" fill="#263b54" rx="2" />
+          <text x="85" y="49" fill="#5CE1E6" fontSize="8" fontFamily="monospace" textAnchor="middle">Fast Lock: K_p=16, K_i=4</text>
+          <rect x="15" y="58" width="140" height="18" fill="#1f3247" rx="2" />
+          <text x="85" y="71" fill="#c87d46" fontSize="8" fontFamily="monospace" textAnchor="middle">Track Mode: K_p=2, K_i=0.25</text>
+        </g>
+        <line x1="430" y1="60" x2="480" y2="60" stroke="#d4af37" strokeWidth="2" />
+
+        {/* Digitally Controlled Oscillator (DCO) */}
+        <g transform="translate(480, 30)">
+          <rect width="110" height="60" fill="#142132" stroke="#c87d46" strokeWidth="1.5" rx="4" />
+          <text x="55" y="26" fill="#fff" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">DCO CORE</text>
+          <text x="55" y="44" fill="#c87d46" fontSize="8" fontFamily="monospace" textAnchor="middle">LC / Ring 2.4 GHz</text>
+        </g>
+        <line x1="590" y1="60" x2="650" y2="60" stroke="#d4af37" strokeWidth="2" />
+
+        {/* Output Clock */}
+        <text x="660" y="65" fill="#5CE1E6" fontSize="10" fontFamily="monospace">f_out (2.4 GHz)</text>
+
+        {/* Feedback Path Divider */}
+        <line x1="620" y1="60" x2="620" y2="150" stroke="#9aa4b2" strokeWidth="1.5" />
+        <line x1="620" y1="150" x2="440" y2="150" stroke="#9aa4b2" strokeWidth="1.5" />
+
+        <g transform="translate(320, 125)">
+          <rect width="120" height="50" fill="#101926" stroke="#9aa4b2" strokeWidth="1.2" rx="4" />
+          <text x="60" y="24" fill="#fff" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">DIVIDER (/N)</text>
+          <text x="60" y="40" fill="#9aa4b2" fontSize="8" fontFamily="monospace" textAnchor="middle">Multi-Modulus</text>
+        </g>
+
+        <line x1="320" y1="150" x2="155" y2="150" stroke="#9aa4b2" strokeWidth="1.5" />
+        <line x1="155" y1="150" x2="155" y2="90" stroke="#9aa4b2" strokeWidth="1.5" />
+      </svg>
+      <div style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#BFC8D0', opacity: 0.75, lineHeight: 1.5 }}>
+        Caption: Block diagram of the dual-mode gain-scheduled loop filter switching dynamically from high proportional/integral gains for sub-100 cycle lock into low-bandwidth mode for 1.8 ps RMS phase jitter tracking.
+      </div>
+    </div>
+  );
+}
+
+/* Computational Lithography GNN-T Architecture Visualizer */
+export function GnnLithoArchitectureVisualizer() {
+  return (
+    <div style={{ background: '#091522', border: '1px solid rgba(78, 205, 196, 0.3)', borderRadius: 'var(--radius-md)', padding: '1.5rem', marginBlock: '1.5rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '0.5rem' }}>
+        <span className="text-mono" style={{ fontSize: '0.75rem', color: '#4ecdc4', textTransform: 'uppercase' }}>
+          GNN-T Polygon Graph Neural Network Pipeline (PyTorch Geometric)
+        </span>
+        <span className="text-mono" style={{ fontSize: '0.7rem', color: '#BFC8D0', opacity: 0.7 }}>
+          AI for EDA Architecture
+        </span>
+      </div>
+
+      <svg viewBox="0 0 740 180" width="100%" height="auto" aria-label="GNN computational lithography pipeline">
+        {/* Step 1: Layout Polygons */}
+        <g transform="translate(20, 25)">
+          <rect width="140" height="130" fill="#132030" stroke="#4ecdc4" strokeWidth="1.2" rx="4" />
+          <text x="70" y="24" fill="#4ecdc4" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">1. GDSII MASK</text>
+          <rect x="25" y="40" width="40" height="30" fill="#223b54" />
+          <rect x="75" y="55" width="45" height="25" fill="#223b54" />
+          <rect x="40" y="80" width="55" height="35" fill="#223b54" />
+          <text x="70" y="140" fill="#9aa4b2" fontSize="8" fontFamily="monospace" textAnchor="middle">Manhattan Polygons</text>
+        </g>
+        <line x1="160" y1="90" x2="200" y2="90" stroke="#4ecdc4" strokeWidth="2" />
+
+        {/* Step 2: Polygon Graph Construction */}
+        <g transform="translate(200, 25)">
+          <rect width="150" height="130" fill="#14263b" stroke="#5CE1E6" strokeWidth="1.2" rx="4" />
+          <text x="75" y="24" fill="#5CE1E6" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">2. GRAPH MAPPING</text>
+          <circle cx="45" cy="55" r="7" fill="#d4af37" />
+          <circle cx="105" cy="55" r="7" fill="#d4af37" />
+          <circle cx="75" cy="95" r="7" fill="#d4af37" />
+          <line x1="45" y1="55" x2="105" y2="55" stroke="#9aa4b2" strokeWidth="1" />
+          <line x1="45" y1="55" x2="75" y2="95" stroke="#9aa4b2" strokeWidth="1" />
+          <line x1="105" y1="55" x2="75" y2="95" stroke="#9aa4b2" strokeWidth="1" />
+          <text x="75" y="125" fill="#9aa4b2" fontSize="8" fontFamily="monospace" textAnchor="middle">Nodes: Polygon Edges</text>
+          <text x="75" y="140" fill="#9aa4b2" fontSize="8" fontFamily="monospace" textAnchor="middle">Edges: Spatial Proximity</text>
+        </g>
+        <line x1="350" y1="90" x2="390" y2="90" stroke="#4ecdc4" strokeWidth="2" />
+
+        {/* Step 3: Transformer-GNN Layers */}
+        <g transform="translate(390, 25)">
+          <rect width="160" height="130" fill="#1b2a3d" stroke="#d4af37" strokeWidth="1.5" rx="4" />
+          <text x="80" y="24" fill="#d4af37" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">3. GNN-T ENCODER</text>
+          <rect x="15" y="38" width="130" height="22" fill="#253a52" rx="2" />
+          <text x="80" y="53" fill="#fff" fontSize="8" fontFamily="monospace" textAnchor="middle">Spatial Edge Conv</text>
+          <rect x="15" y="66" width="130" height="22" fill="#253a52" rx="2" />
+          <text x="80" y="81" fill="#fff" fontSize="8" fontFamily="monospace" textAnchor="middle">Transformer Attention</text>
+          <rect x="15" y="94" width="130" height="22" fill="#253a52" rx="2" />
+          <text x="80" y="109" fill="#fff" fontSize="8" fontFamily="monospace" textAnchor="middle">Multi-Head Aggregation</text>
+        </g>
+        <line x1="550" y1="90" x2="590" y2="90" stroke="#4ecdc4" strokeWidth="2" />
+
+        {/* Step 4: Edge Error Prediction */}
+        <g transform="translate(590, 25)">
+          <rect width="130" height="130" fill="#132030" stroke="#4ecdc4" strokeWidth="1.2" rx="4" />
+          <text x="65" y="24" fill="#4ecdc4" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">4. PREDICTIONS</text>
+          <text x="65" y="55" fill="#f4f5f6" fontSize="9" fontFamily="monospace" textAnchor="middle">EPE &lt; 1.2nm</text>
+          <text x="65" y="75" fill="#d4af37" fontSize="9" fontFamily="monospace" textAnchor="middle">14x Speedup</text>
+          <text x="65" y="105" fill="#9aa4b2" fontSize="8" fontFamily="sans-serif" textAnchor="middle">vs Numerical</text>
+          <text x="65" y="120" fill="#9aa4b2" fontSize="8" fontFamily="sans-serif" textAnchor="middle">Calibre OPC</text>
+        </g>
+      </svg>
+      <div style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#BFC8D0', opacity: 0.75, lineHeight: 1.5 }}>
+        Caption: Pipeline converting post-layout GDSII polygon vertices into proximity graphs where graph neural network attention predicts sub-resolution edge placement error at 14× the speed of numerical optical solvers.
+      </div>
+    </div>
+  );
+}

@@ -61,12 +61,62 @@ export interface Project {
 
 export const PROJECTS: Project[] = [
   {
+    id: 'adpll-core',
+    title: 'Gain-Scheduled All-Digital Phase-Locked Loop (GS-ADPLL) & RTL-to-GDS Flow',
+    shortTitle: 'Adaptive ADPLL & RTL-to-GDS',
+    status: 'Research-prototype',
+    featured: true,
+    featuredOrder: 1,
+    category: ['Digital Design & RTL', 'ASIC & VLSI'],
+    repoUrl: 'https://github.com/ALLENJOE-A/gs-adpll-core',
+    summary:
+      'All-digital phase-locked loop (ADPLL) implementing dynamic gain-scheduled loop filter parameters to simultaneously optimize rapid phase acquisition and steady-state jitter performance, evaluated through OpenROAD physical design flow.',
+    problem:
+      'Conventional ADPLL architectures face a fundamental loop-bandwidth tradeoff: wide loop bandwidth accelerates frequency lock during startup or channel hops but passes high DCO quantization noise and jitter to the output; conversely, narrow bandwidth suppresses jitter but drastically inflates acquisition cycle count.',
+    motivation:
+      'Design a dual-mode gain-scheduled digital loop filter (DLF) that switches parameters on-the-fly: operating in wide-bandwidth proportional-integral mode during acquisition to lock in under 100 cycles, and switching dynamically to low-bandwidth mode to suppress phase noise once frequency lock is detected.',
+    architecture:
+      'Time-to-Digital Converter (TDC) / Phase-Frequency Detector, dynamic gain-scheduled digital loop filter (DLF), high-resolution Digitally Controlled Oscillator (DCO) behavioral model, and multi-modulus feedback divider with standard-cell ASIC implementation flow.',
+    methodology:
+      'Digital microarchitecture synthesized in synthesizable SystemVerilog/Verilog. Behavioral simulation executed in ModelSim / Questa validating fast-lock transitions. OpenLane / OpenROAD toolchain configured for standard-cell physical placement and routing.',
+    tools: ['SystemVerilog', 'Verilog', 'OpenROAD', 'OpenLane', 'ModelSim / Questa', 'Git'],
+    claims: [
+      {
+        claim: 'Lock acquisition time',
+        value: '85',
+        unit: 'cycles',
+        conditions: 'Simulated high-gain acquisition mode; behavioral testbench',
+        sourceFile: 'README.md',
+        evidenceCategory: 'C',
+      },
+      {
+        claim: 'Target carrier frequency',
+        value: '2.4',
+        unit: 'GHz',
+        conditions: 'DCO design specification',
+        sourceFile: 'README.md',
+        evidenceCategory: 'C',
+      },
+      {
+        claim: 'RMS phase jitter (simulated)',
+        value: '1.8',
+        unit: 'ps',
+        conditions: 'Simulated tracking mode with DCO quantization model',
+        sourceFile: 'README.md',
+        evidenceCategory: 'C',
+      },
+    ],
+    figures: [],
+    tags: ['ADPLL', 'RTL-to-GDS', 'OpenROAD', 'SystemVerilog', 'Clock Synthesis', 'ASIC', 'VLSI'],
+    accentColor: '#d4af37',
+  },
+  {
     id: 'dma-controller',
     title: '4-Channel Adaptive Burst DMA Controller with Hardware Performance Monitoring',
     shortTitle: 'Adaptive Burst DMA',
     status: 'Completed',
     featured: true,
-    featuredOrder: 1,
+    featuredOrder: 2,
     category: ['Digital Design & RTL', 'Verification & Testing'],
     repoUrl: 'https://github.com/ALLENJOE-A/4-Channel-Adaptive-Burst-DMA-Controller-with-Hardware-Performance-Monitoring',
     summary:
@@ -132,7 +182,7 @@ export const PROJECTS: Project[] = [
     shortTitle: 'JLTFET Biosensor',
     status: 'Research-prototype',
     featured: true,
-    featuredOrder: 2,
+    featuredOrder: 3,
     category: ['Semiconductor Devices & TCAD'],
     repoUrl: 'https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD',
     summary:
@@ -157,7 +207,7 @@ export const PROJECTS: Project[] = [
     shortTitle: 'GNN Lithography',
     status: 'In-progress',
     featured: true,
-    featuredOrder: 3,
+    featuredOrder: 4,
     category: ['AI for Semiconductor Engineering'],
     repoUrl: 'https://github.com/ALLENJOE-A/GNN-T_Edge-Error-Prediction-for-Computational-Lithography',
     summary:
@@ -181,7 +231,8 @@ export const PROJECTS: Project[] = [
     title: 'CNN-Driven Explainable AI for Lithography Hotspot Detection',
     shortTitle: 'XAI Hotspot Detection',
     status: 'In-progress',
-    featured: false,
+    featured: true,
+    featuredOrder: 5,
     category: ['AI for Semiconductor Engineering'],
     repoUrl: 'https://github.com/ALLENJOE-A/CNN-Driven-Explainable-AI-for-Lithography-Hotspot-Detection',
     summary:
@@ -205,7 +256,8 @@ export const PROJECTS: Project[] = [
     title: 'Efficient Processing Element Array for CNN Accelerator',
     shortTitle: 'CNN PE Array',
     status: 'In-progress',
-    featured: false,
+    featured: true,
+    featuredOrder: 6,
     category: ['Digital Design & RTL', 'ASIC & VLSI'],
     repoUrl: 'https://github.com/ALLENJOE-A/DESIGN-AND-IMPLEMENTATION-OF-EFFICIENT-PROCESSING-ELEMENT-ARRAY-FOR-CNN-ACCELERATOR',
     summary:
@@ -229,7 +281,8 @@ export const PROJECTS: Project[] = [
     title: 'DG Source-Pocket Engineered Vertical TFET',
     shortTitle: 'DG-SP Vertical TFET',
     status: 'Research-prototype',
-    featured: false,
+    featured: true,
+    featuredOrder: 7,
     category: ['Semiconductor Devices & TCAD'],
     repoUrl: 'https://github.com/ALLENJOE-A/DG-Source-Pocket-Engineered-Vertical-TFET',
     summary:
