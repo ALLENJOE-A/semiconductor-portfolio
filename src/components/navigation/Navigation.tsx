@@ -56,16 +56,45 @@ export function Navigation() {
           ))}
         </ul>
 
-        {/* External CTA */}
-        <a
-          href="https://github.com/ALLENJOE-A"
-          target="_blank"
-          rel="noopener noreferrer"
-          className={styles.githubBtn}
-          aria-label="GitHub profile (opens in new tab)"
-        >
-          GitHub ↗
-        </a>
+        {/* External CTAs: Resume & GitHub */}
+        <div className={styles.ctaGroup}>
+          <a
+            href="/resume.pdf"
+            download="Allen_Joe_A_VLSI_Resume.pdf"
+            className={styles.resumeBtn}
+            aria-label="Download Resume (PDF)"
+          >
+            Resume ⤓
+          </a>
+          <a
+            href="https://github.com/ALLENJOE-A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.githubBtn}
+            aria-label="GitHub profile (opens in new tab)"
+          >
+            GitHub ↗
+          </a>
+          <div className={styles.mobileCtas}>
+          <a
+            href="/resume.pdf"
+            download="Allen_Joe_A_VLSI_Resume.pdf"
+            className={styles.mobileResumeBtn}
+            tabIndex={menuOpen ? 0 : -1}
+          >
+            Download Resume ⤓
+          </a>
+          <a
+            href="https://github.com/ALLENJOE-A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.mobileGithubBtn}
+            tabIndex={menuOpen ? 0 : -1}
+          >
+            GitHub Profile ↗
+          </a>
+        </div>
+      </div>
 
         {/* Mobile hamburger */}
         <button
@@ -126,6 +155,25 @@ export function Navigation() {
             </a>
           </li>
         </ul>
+        <div className={styles.mobileCtas}>
+          <a
+            href="/resume.pdf"
+            download="Allen_Joe_A_VLSI_Resume.pdf"
+            className={styles.mobileResumeBtn}
+            tabIndex={menuOpen ? 0 : -1}
+          >
+            Download Resume ⤓
+          </a>
+          <a
+            href="https://github.com/ALLENJOE-A"
+            target="_blank"
+            rel="noopener noreferrer"
+            className={styles.mobileGithubBtn}
+            tabIndex={menuOpen ? 0 : -1}
+          >
+            GitHub Profile ↗
+          </a>
+        </div>
       </div>
     </header>
   );

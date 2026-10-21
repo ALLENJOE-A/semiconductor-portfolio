@@ -78,21 +78,47 @@
 .link:hover::after,
 .link.active::after { width: 100%; }
 
+/* Action CTA group */
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.resumeBtn {
+  font-size: var(--text-sm);
+  font-weight: 700;
+  color: #0b111a;
+  background: #d4af37;
+  text-decoration: none !important;
+  padding: 0.35rem 0.95rem;
+  border-radius: var(--radius-sm);
+  white-space: nowrap;
+  transition: all var(--duration-fast);
+  box-shadow: 0 2px 10px rgba(212, 175, 55, 0.25);
+}
+.resumeBtn:hover {
+  background: #e5c158;
+  transform: translateY(-1px);
+  box-shadow: 0 4px 14px rgba(212, 175, 55, 0.4);
+}
+
 /* GitHub button */
 .githubBtn {
   font-size: var(--text-sm);
   font-weight: 600;
-  color: var(--accent-secondary);
+  color: var(--color-silicon-white);
   text-decoration: none !important;
-  border: 1px solid rgba(92,225,230,0.35);
-  padding: 0.35rem 1rem;
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  padding: 0.35rem 0.95rem;
   border-radius: var(--radius-sm);
   white-space: nowrap;
   transition: background var(--duration-fast), border-color var(--duration-fast);
 }
 .githubBtn:hover {
-  background: rgba(92,225,230,0.1);
-  border-color: var(--accent-secondary);
+  background: rgba(255, 255, 255, 0.08);
+  border-color: rgba(255, 255, 255, 0.35);
+  color: #ffffff;
 }
 
 /* Hamburger */
@@ -139,9 +165,42 @@
 .mobileLink:hover,
 .mobileLink.active { color: var(--color-technical-white); }
 
+/* Mobile action buttons */
+.mobileCtas {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  margin-top: 1.5rem;
+}
+
+.mobileResumeBtn {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background: #d4af37;
+  color: #0b111a;
+  font-weight: 700;
+  border-radius: var(--radius-sm);
+  text-decoration: none !important;
+  font-size: var(--text-sm);
+}
+
+.mobileGithubBtn {
+  display: block;
+  text-align: center;
+  padding: 0.75rem 1rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  text-decoration: none !important;
+  font-size: var(--text-sm);
+}
+
 /* Responsive */
 @media (max-width: 768px) {
-  .links, .githubBtn { display: none; }
+  .links, .ctaGroup { display: none; }
   .menuToggle { display: flex; }
   .mobileMenu { display: block; }
   .mobileMenu:not(.mobileMenuOpen) { display: none; }
