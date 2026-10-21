@@ -19,12 +19,29 @@ of every substantive claim published on the portfolio website.
 | Name        | Allen Joe A                                        | GitHub profile  | Verified         |
 | GitHub      | https://github.com/ALLENJOE-A                     | Direct          | Verified         |
 | LinkedIn    | https://www.linkedin.com/in/allen-joe-a-36069831b/| Direct          | Verified         |
-| Institution | Not published — see LinkedIn                       | —               | Pending audit    |
-| Degree      | Not published — see LinkedIn                       | —               | Pending audit    |
+| Degree      | B.Tech in Electronics & Communication (VLSI Focus)| Verified Resume | Verified         |
+| Resume      | /resume.pdf                                       | Direct Download | Verified         |
 
 ---
 
 ## Projects
+
+### Gain-Scheduled All-Digital PLL (GS-ADPLL) & RTL-to-GDS Flow
+
+**Repository:** https://github.com/ALLENJOE-A/gs-adpll-core  
+**Status:** Completed (RTL & Synthesis Flow)  
+**Languages / Tools:** SystemVerilog, Verilog, OpenROAD, Yosys, SkyWater 130nm PDK
+
+| Claim | Value | Unit | Conditions | Source | Category | Notes |
+|-------|-------|------|-----------|--------|----------|-------|
+| Lock acquisition time | 85 | cycles | Gain-scheduled high proportional gain mode (simulated) | README.md | C | Simulated behavioral/RTL |
+| RMS phase jitter | 1.8 | ps | Simulated tracking mode with DCO quantization model | README.md | C | Simulated behavioral/RTL |
+
+**Uncertainties:**
+- OpenROAD physical layout GDS generated for SkyWater 130nm; no silicon tapeout claimed.
+- Phase noise and jitter are behavioral/digital simulation models.
+
+---
 
 ### 4-Channel Adaptive Burst DMA Controller
 
@@ -126,5 +143,5 @@ Each is labelled on the site as "Conceptual illustration."
 
 ---
 
-*Last updated: 2026-10-20*  
+*Last updated: 2026-10-21 (Portfolio Polish & Recruiter Enhancements)*  
 *To update: edit `src/data/projects.ts` and update this file to match.*
