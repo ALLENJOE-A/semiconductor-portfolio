@@ -32,18 +32,31 @@ export default function AboutPage() {
         {/* Academic background */}
         <section className={styles.section} aria-labelledby="academic-heading">
           <h2 id="academic-heading" className={styles.h2}>Academic Background</h2>
-          <div className={styles.infoNote} role="note">
-            Academic details are not published here to avoid inaccuracy.
-            Please refer to the{' '}
+          <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px', padding: '1.25rem', marginBottom: '1.25rem' }}>
+            <h3 style={{ margin: '0 0 0.5rem 0', fontSize: '1.1rem', color: '#fff' }}>B.Tech in Electronics &amp; Communication Engineering</h3>
+            <p style={{ margin: '0 0 0.5rem 0', fontSize: '0.85rem', color: '#5CE1E6', fontFamily: 'var(--font-mono)' }}>Focus: VLSI Systems, Semiconductor Physics &amp; AI for EDA</p>
+            <p style={{ margin: 0, fontSize: '0.9rem', color: '#BFC8D0', lineHeight: 1.6 }}>
+              Rigorous coursework in CMOS VLSI Design, Semiconductor Device Physics, Microarchitecture &amp; RTL Design, Computer Architecture, Synthesis &amp; Static Timing Analysis, and Machine Learning.
+            </p>
+          </div>
+          <div style={{ display: 'flex', gap: '1rem', flexWrap: 'wrap' }}>
+            <a
+              href="/resume.pdf"
+              download="Allen_Joe_A_VLSI_Resume.pdf"
+              className={styles.inlineLink}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(212,175,55,0.12)', border: '1px solid rgba(212,175,55,0.3)', padding: '0.4rem 0.8rem', borderRadius: '4px', color: '#d4af37', textDecoration: 'none' }}
+            >
+              Download Verified Resume (PDF) ⤓
+            </a>
             <a
               href={PROFILE.linkedin}
               target="_blank"
               rel="noopener noreferrer"
               className={styles.inlineLink}
+              style={{ display: 'inline-flex', alignItems: 'center', gap: '0.5rem', background: 'rgba(92,225,230,0.08)', border: '1px solid rgba(92,225,230,0.25)', padding: '0.4rem 0.8rem', borderRadius: '4px', color: '#5CE1E6', textDecoration: 'none' }}
             >
-              LinkedIn profile ↗
-            </a>{' '}
-            for verified institutional information.
+              View Institutional Details on LinkedIn ↗
+            </a>
           </div>
         </section>
 

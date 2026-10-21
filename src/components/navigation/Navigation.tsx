@@ -21,9 +21,6 @@ export function Navigation() {
     return () => window.removeEventListener('scroll', onScroll);
   }, []);
 
-  // Close mobile menu on route change
-  useEffect(() => { setMenuOpen(false); }, [location.pathname]);
-
   // Prevent body scroll when mobile menu is open
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : '';
@@ -127,6 +124,7 @@ export function Navigation() {
                 className={`${styles.mobileLink} ${location.pathname === href ? styles.active : ''}`}
                 tabIndex={menuOpen ? 0 : -1}
                 aria-current={location.pathname === href ? 'page' : undefined}
+                onClick={() => setMenuOpen(false)}
               >
                 {label}
               </Link>

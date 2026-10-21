@@ -1,6 +1,15 @@
 import { useParams, Link } from 'react-router-dom';
 import { PROJECTS, BENCHMARK_TABLE } from '../data/projects';
-import { DmaArchitectureDiagram, DmaWaveformVisualizer, BiosensorDeviceVisualizer } from '../components/evidence/ProjectVisualEvidence';
+import {
+  DmaArchitectureDiagram,
+  DmaWaveformVisualizer,
+  BiosensorDeviceVisualizer,
+  AdpllArchitectureVisualizer,
+  GnnLithoArchitectureVisualizer,
+  DgspVtfetVisualizer,
+  CnnHotspotVisualizer,
+  PeArrayVisualizer,
+} from '../components/evidence/ProjectVisualEvidence';
 import styles from './ProjectDetailPage.module.css';
 
 // ── Benchmark table (DMA project) ──────────────────────────────────────────
@@ -37,8 +46,19 @@ function BenchmarkTable() {
 }
 
 // ── Claims table ───────────────────────────────────────────────────────────
-function ClaimsSection({ claims }: { claims: (typeof PROJECTS)[0]['claims'] }) {
-  if (!claims.length) return null;
+function ClaimsSection({ claims, status }: { claims: (typeof PROJECTS)[0]['claims']; status: string }) {
+  if (!claims.length) {
+    return (
+      <section className={styles.section} aria-labelledby="claims-heading">
+        <h2 id="claims-heading" className={styles.h2}>Technical Evidence &amp; Verification Status</h2>
+        <div style={{ background: 'rgba(255,255,255,0.02)', border: '1px solid rgba(255,255,255,0.08)', borderRadius: '6px', padding: '1.25rem' }}>
+          <p style={{ margin: 0, fontSize: '0.9rem', color: '#BFC8D0', lineHeight: 1.6 }}>
+            <strong style={{ color: '#5CE1E6' }}>Status: {status}</strong> — RTL, TCAD physics models, and simulation scripts are established in the repository. Quantitative benchmarks follow category E / reported metrics guidelines and will be updated upon formal peer review or silicon characterization.
+          </p>
+        </div>
+      </section>
+    );
+  }
   const catLabel: Record<string, string> = {
     A: 'Source-verified',
     B: 'Test-verified',
@@ -147,7 +167,12 @@ export default function ProjectDetailPage() {
             <h2 id="arch-heading" className={styles.h2}>Architecture</h2>
             <p className={styles.prose}>{project.architecture}</p>
             {project.id === 'dma-controller' && <DmaArchitectureDiagram />}
+            {project.id === 'adpll-core' && <AdpllArchitectureVisualizer />}
             {project.id === 'jltfet-biosensor' && <BiosensorDeviceVisualizer />}
+            {project.id === 'gnn-lithography' && <GnnLithoArchitectureVisualizer />}
+            {project.id === 'dgsp-vtfet' && <DgspVtfetVisualizer />}
+            {project.id === 'cnn-hotspot' && <CnnHotspotVisualizer />}
+            {project.id === 'pe-array-cnn' && <PeArrayVisualizer />}
           </section>
 
           {/* Methodology */}
@@ -173,7 +198,7 @@ export default function ProjectDetailPage() {
           )}
 
           {/* Technical claims */}
-          <ClaimsSection claims={project.claims} />
+          <ClaimsSection claims={project.claims} status={project.status} />
 
           {/* Tools */}
           <section className={styles.section} aria-labelledby="tools-heading">

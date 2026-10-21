@@ -381,3 +381,242 @@ export function GnnLithoArchitectureVisualizer() {
     </div>
   );
 }
+
+/* Double-Gate Source-Pocket Vertical TFET Visualizer */
+export function DgspVtfetVisualizer() {
+  return (
+    <div style={{ background: '#091522', border: '1px solid rgba(200, 135, 82, 0.35)', borderRadius: 'var(--radius-md)', padding: '1.5rem', marginBlock: '1.5rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '0.5rem' }}>
+        <span className="text-mono" style={{ fontSize: '0.75rem', color: '#c88752', textTransform: 'uppercase' }}>
+          DG-Source-Pocket Vertical TFET Device Simulation Structure (Sentaurus TCAD)
+        </span>
+        <span className="text-mono" style={{ fontSize: '0.7rem', color: '#BFC8D0', opacity: 0.7 }}>
+          Steep-Slope Transistor Architecture
+        </span>
+      </div>
+
+      <svg viewBox="0 0 740 220" width="100%" height="auto" aria-label="DG-SP Vertical TFET cross-section diagram">
+        {/* Drain Contact at Top */}
+        <g transform="translate(295, 10)">
+          <rect width="150" height="24" fill="#2E7BFF" opacity="0.9" rx="3" />
+          <text x="75" y="16" fill="#fff" fontSize="10" fontFamily="monospace" fontWeight="bold" textAnchor="middle">
+            TOP DRAIN (n+)
+          </text>
+        </g>
+
+        {/* Vertical Channel Pillar */}
+        <rect x="330" y="34" width="80" height="90" fill="#182c40" stroke="#5CE1E6" strokeWidth="1" />
+        <text x="370" y="80" fill="#5CE1E6" fontSize="10" fontFamily="monospace" textAnchor="middle">
+          Intrinsic Si
+        </text>
+        <text x="370" y="94" fill="#9aa4b2" fontSize="8" fontFamily="sans-serif" textAnchor="middle">
+          Channel (20nm)
+        </text>
+
+        {/* Dual Symmetric Side Gates with High-k Dielectric */}
+        {/* Left Gate */}
+        <rect x="250" y="44" width="25" height="70" fill="#d4af37" opacity="0.9" rx="2" />
+        <rect x="275" y="44" width="10" height="70" fill="#8cd4d6" opacity="0.8" />
+        <text x="262" y="82" fill="#081521" fontSize="9" fontFamily="monospace" fontWeight="bold" transform="rotate(-90 262 82)" textAnchor="middle">
+          GATE 1
+        </text>
+
+        {/* Right Gate */}
+        <rect x="455" y="44" width="10" height="70" fill="#8cd4d6" opacity="0.8" />
+        <rect x="465" y="44" width="25" height="70" fill="#d4af37" opacity="0.9" rx="2" />
+        <text x="478" y="82" fill="#081521" fontSize="9" fontFamily="monospace" fontWeight="bold" transform="rotate(90 478 82)" textAnchor="middle">
+          GATE 2
+        </text>
+
+        {/* Source-Pocket Layer (Engineered P+ Germanium/SiGe pocket) */}
+        <rect x="310" y="124" width="120" height="22" fill="#c88752" stroke="#e09865" strokeWidth="1.2" rx="2" />
+        <text x="370" y="139" fill="#fff" fontSize="9" fontFamily="monospace" fontWeight="bold" textAnchor="middle">
+          p++ SOURCE POCKET (Narrow Bandgap)
+        </text>
+
+        {/* Bottom Source Region */}
+        <rect x="270" y="146" width="200" height="40" fill="#1b2a3d" stroke="#c88752" strokeWidth="1" rx="4" />
+        <text x="370" y="166" fill="#c88752" fontSize="10" fontFamily="monospace" fontWeight="bold" textAnchor="middle">
+          p+ SOURCE REGION
+        </text>
+        <text x="370" y="180" fill="#9aa4b2" fontSize="8" fontFamily="sans-serif" textAnchor="middle">
+          Steep Band Bending &amp; BTBT Thin Tunneling Barrier
+        </text>
+
+        {/* Annotations */}
+        <line x1="200" y1="135" x2="305" y2="135" stroke="#e09865" strokeWidth="1.5" strokeDasharray="3 2" />
+        <text x="190" y="138" fill="#e09865" fontSize="8.5" fontFamily="monospace" textAnchor="end">
+          Band-to-Band Tunneling Boost
+        </text>
+
+        <line x1="535" y1="80" x2="495" y2="80" stroke="#8cd4d6" strokeWidth="1.5" strokeDasharray="3 2" />
+        <text x="545" y="83" fill="#8cd4d6" fontSize="8.5" fontFamily="monospace">
+          HfO₂ High-k Dielectric (EOT = 0.8nm)
+        </text>
+      </svg>
+      <div style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#BFC8D0', opacity: 0.75, lineHeight: 1.5 }}>
+        Caption: Double-gate vertical tunnel FET architecture featuring an engineered narrow-bandgap p++ source pocket at the source/channel interface to sharply narrow the tunneling barrier and substantially boost ON-current beyond conventional Si TFETs.
+      </div>
+    </div>
+  );
+}
+
+/* Explainable AI Hotspot Detection Pipeline Visualizer */
+export function CnnHotspotVisualizer() {
+  return (
+    <div style={{ background: '#091522', border: '1px solid rgba(92, 225, 230, 0.3)', borderRadius: 'var(--radius-md)', padding: '1.5rem', marginBlock: '1.5rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '0.5rem' }}>
+        <span className="text-mono" style={{ fontSize: '0.75rem', color: '#5CE1E6', textTransform: 'uppercase' }}>
+          Explainable AI Lithography Hotspot Detection (PyTorch / Grad-CAM Saliency)
+        </span>
+        <span className="text-mono" style={{ fontSize: '0.7rem', color: '#BFC8D0', opacity: 0.7 }}>
+          Deep Learning Layout Verification
+        </span>
+      </div>
+
+      <svg viewBox="0 0 740 180" width="100%" height="auto" aria-label="Explainable AI hotspot detection flow">
+        {/* Layout Clip */}
+        <g transform="translate(20, 25)">
+          <rect width="130" height="130" fill="#132338" stroke="#5CE1E6" strokeWidth="1.2" rx="4" />
+          <text x="65" y="24" fill="#5CE1E6" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">
+            LAYOUT CLIP
+          </text>
+          <path d="M 35 45 L 95 45 L 95 65 L 75 65 L 75 115 L 55 115 L 55 65 L 35 65 Z" fill="#2E7BFF" opacity="0.8" />
+          <text x="65" y="140" fill="#9aa4b2" fontSize="8" fontFamily="monospace" textAnchor="middle">
+            128x128 Aerial Pattern
+          </text>
+        </g>
+        <line x1="150" y1="90" x2="185" y2="90" stroke="#5CE1E6" strokeWidth="2" />
+
+        {/* Feature Extraction CNN Backbone */}
+        <g transform="translate(185, 25)">
+          <rect width="165" height="130" fill="#17283c" stroke="#2E7BFF" strokeWidth="1.5" rx="4" />
+          <text x="82" y="24" fill="#2E7BFF" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">
+            CNN RESNET BACKBONE
+          </text>
+          <rect x="15" y="38" width="135" height="22" fill="#223b56" rx="2" />
+          <text x="82" y="52" fill="#fff" fontSize="8" fontFamily="monospace" textAnchor="middle">Conv2D 7x7 (Stride 2)</text>
+          <rect x="15" y="66" width="135" height="22" fill="#223b56" rx="2" />
+          <text x="82" y="80" fill="#fff" fontSize="8" fontFamily="monospace" textAnchor="middle">Residual Blocks (Bottleneck)</text>
+          <rect x="15" y="94" width="135" height="22" fill="#223b56" rx="2" />
+          <text x="82" y="108" fill="#5CE1E6" fontSize="8" fontFamily="monospace" textAnchor="middle">Global Avg Pooling</text>
+        </g>
+        <line x1="350" y1="90" x2="385" y2="90" stroke="#5CE1E6" strokeWidth="2" />
+
+        {/* Grad-CAM Saliency Engine */}
+        <g transform="translate(385, 25)">
+          <rect width="170" height="130" fill="#212638" stroke="#d4af37" strokeWidth="1.5" rx="4" />
+          <text x="85" y="24" fill="#d4af37" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">
+            GRAD-CAM EXPLAINABILITY
+          </text>
+          <circle cx="85" cy="65" r="32" fill="#151b26" stroke="#c88752" strokeWidth="1" />
+          {/* Heatmap rings */}
+          <circle cx="85" cy="65" r="22" fill="#d4af37" opacity="0.35" />
+          <circle cx="85" cy="65" r="10" fill="#e05353" opacity="0.8" />
+          <text x="85" y="125" fill="#f4f5f6" fontSize="8" fontFamily="monospace" textAnchor="middle">
+            Gradient Attributions: ∂y/∂A^k
+          </text>
+        </g>
+        <line x1="555" y1="90" x2="590" y2="90" stroke="#5CE1E6" strokeWidth="2" />
+
+        {/* Output & Attribution */}
+        <g transform="translate(590, 25)">
+          <rect width="130" height="130" fill="#132338" stroke="#e05353" strokeWidth="1.2" rx="4" />
+          <text x="65" y="24" fill="#e05353" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">
+            HOTSPOT CLASSIFIER
+          </text>
+          <text x="65" y="55" fill="#e05353" fontSize="11" fontFamily="monospace" fontWeight="bold" textAnchor="middle">
+            ALERT: PINCH
+          </text>
+          <text x="65" y="75" fill="#fff" fontSize="9" fontFamily="monospace" textAnchor="middle">
+            Prob: 98.4%
+          </text>
+          <text x="65" y="105" fill="#9aa4b2" fontSize="7.5" fontFamily="sans-serif" textAnchor="middle">
+            Pinpoints exact necking
+          </text>
+          <text x="65" y="120" fill="#9aa4b2" fontSize="7.5" fontFamily="sans-serif" textAnchor="middle">
+            location on mask
+          </text>
+        </g>
+      </svg>
+      <div style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#BFC8D0', opacity: 0.75, lineHeight: 1.5 }}>
+        Caption: Explainable AI pipeline combining deep convolutional classification with Grad-CAM gradient backpropagation to pinpoint lithography pinch and bridge hotspots on 2D mask layouts with spatial attribution.
+      </div>
+    </div>
+  );
+}
+
+/* 2D Systolic Processing Element Array Visualizer */
+export function PeArrayVisualizer() {
+  return (
+    <div style={{ background: '#091522', border: '1px solid rgba(46, 123, 255, 0.35)', borderRadius: 'var(--radius-md)', padding: '1.5rem', marginBlock: '1.5rem' }}>
+      <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '1rem', borderBottom: '1px solid rgba(255,255,255,0.08)', paddingBottom: '0.5rem' }}>
+        <span className="text-mono" style={{ fontSize: '0.75rem', color: '#2E7BFF', textTransform: 'uppercase' }}>
+          Systolic Processing Element (PE) Array Architecture (SystemVerilog / FPGA)
+        </span>
+        <span className="text-mono" style={{ fontSize: '0.7rem', color: '#BFC8D0', opacity: 0.7 }}>
+          CNN Hardware Accelerator
+        </span>
+      </div>
+
+      <svg viewBox="0 0 740 210" width="100%" height="auto" aria-label="Systolic array architecture diagram">
+        {/* Input Activation Vectors on Left */}
+        <text x="25" y="60" fill="#5CE1E6" fontSize="9" fontFamily="monospace">Act[0] →</text>
+        <text x="25" y="110" fill="#5CE1E6" fontSize="9" fontFamily="monospace">Act[1] →</text>
+        <text x="25" y="160" fill="#5CE1E6" fontSize="9" fontFamily="monospace">Act[2] →</text>
+
+        {/* 3x3 Systolic PE Array */}
+        {[0, 1, 2].map(row => (
+          [0, 1, 2].map(col => (
+            <g key={`${row}-${col}`} transform={`translate(${110 + col * 150}, ${30 + row * 50})`}>
+              <rect width="110" height="40" fill="#152438" stroke="#2E7BFF" strokeWidth="1.2" rx="4" />
+              <text x="55" y="16" fill="#fff" fontSize="9" fontFamily="monospace" fontWeight="bold" textAnchor="middle">
+                PE [{row},{col}]
+              </text>
+              <text x="55" y="30" fill="#5CE1E6" fontSize="8" fontFamily="monospace" textAnchor="middle">
+                MAC: W·X + Psum
+              </text>
+              {/* Horizontal activation arrow */}
+              {col < 2 && (
+                <line x1="110" y1="20" x2="150" y2="20" stroke="#5CE1E6" strokeWidth="1.5" />
+              )}
+              {/* Vertical partial sum arrow */}
+              {row < 2 && (
+                <line x1="55" y1="40" x2="55" y2="50" stroke="#d4af37" strokeWidth="1.5" />
+              )}
+            </g>
+          ))
+        ))}
+
+        {/* Top Weight Stream Indicators */}
+        <text x="165" y="18" fill="#c88752" fontSize="8.5" fontFamily="monospace" textAnchor="middle">↓ W[0,c]</text>
+        <text x="315" y="18" fill="#c88752" fontSize="8.5" fontFamily="monospace" textAnchor="middle">↓ W[1,c]</text>
+        <text x="465" y="18" fill="#c88752" fontSize="8.5" fontFamily="monospace" textAnchor="middle">↓ W[2,c]</text>
+
+        {/* Output Accumulators on Right */}
+        <g transform="translate(585, 30)">
+          <rect width="130" height="140" fill="#1b2a3d" stroke="#d4af37" strokeWidth="1.2" rx="4" />
+          <text x="65" y="22" fill="#d4af37" fontSize="10" fontFamily="sans-serif" fontWeight="bold" textAnchor="middle">
+            POST-ACCUMULATOR
+          </text>
+          <text x="65" y="48" fill="#fff" fontSize="8.5" fontFamily="monospace" textAnchor="middle">
+            • ReLU Activation
+          </text>
+          <text x="65" y="70" fill="#fff" fontSize="8.5" fontFamily="monospace" textAnchor="middle">
+            • Quantization (INT8)
+          </text>
+          <text x="65" y="92" fill="#5CE1E6" fontSize="8.5" fontFamily="monospace" textAnchor="middle">
+            • AXI Stream Out
+          </text>
+          <text x="65" y="122" fill="#c88752" fontSize="8" fontFamily="monospace" textAnchor="middle">
+            High Arithmetic Density
+          </text>
+        </g>
+        <line x1="530" y1="100" x2="585" y2="100" stroke="#d4af37" strokeWidth="2" />
+      </svg>
+      <div style={{ marginTop: '0.75rem', fontSize: '0.75rem', color: '#BFC8D0', opacity: 0.75, lineHeight: 1.5 }}>
+        Caption: Scalable systolic Processing Element (PE) array executing high-density matrix-matrix multiplication via weight-stationary dataflow, streaming feature activations horizontally and cascading accumulated partial sums vertically.
+      </div>
+    </div>
+  );
+}

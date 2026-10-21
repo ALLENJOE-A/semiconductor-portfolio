@@ -7,6 +7,8 @@ const NAV = [
   ['/research', 'Research'], ['/about', 'About'], ['/contact', 'Contact'],
 ] as const;
 
+const CURRENT_YEAR = new Date().getFullYear();
+
 export function Footer() {
   return (
     <footer className={styles.footer} role="contentinfo">
@@ -55,7 +57,7 @@ export function Footer() {
         {/* Bottom bar */}
         <div className={styles.bottom}>
           <span className={`${styles.copy} text-mono`}>
-            © {new Date().getFullYear()} {PROFILE.name}
+            © {CURRENT_YEAR} {PROFILE.name}
           </span>
           <span className={`${styles.note} text-mono`}>
             VLSI &amp; Semiconductor Engineering
