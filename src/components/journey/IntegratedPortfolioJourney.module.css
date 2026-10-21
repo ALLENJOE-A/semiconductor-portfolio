@@ -1,0 +1,353 @@
+/* ============================================================
+   INTEGRATED PORTFOLIO JOURNEY
+   Unified 3D Scene + Coordinated Real Engineering Storytelling
+   Art Direction: Deep Charcoal, Slate Grey, Warm Sand & Copper
+   ============================================================ */
+
+.journeyWrapper {
+  position: relative;
+  width: 100%;
+  background: #0e131b;
+  color: #f4f5f6;
+  overflow: clip;
+}
+
+/* ── Sticky 3D Stage Viewport ─────────────────────────────── */
+
+.stickyCanvasStage {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+  background: radial-gradient(circle at 65% 50%, #161f2c 0%, #101620 55%, #0a0d14 100%);
+}
+
+.canvasInner {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: auto;
+}
+
+/* ── Minimal Unobtrusive Branding HUD ─────────────────────── */
+
+.topHud {
+  position: absolute;
+  top: 5.5rem;
+  left: clamp(1.5rem, 5vw, 4rem);
+  right: clamp(1.5rem, 5vw, 4rem);
+  z-index: 20;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  pointer-events: none;
+}
+
+.hudIdentity {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.hudName {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #f4f5f6;
+  font-weight: 700;
+}
+
+.hudDiscipline {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #9aa4b2;
+  letter-spacing: 0.08em;
+}
+
+.hudPill {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+  background: rgba(22, 31, 44, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.35rem 0.8rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: 0.7rem;
+  color: #e2e8f0;
+}
+
+.hudDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #d4af37; /* Warm gold accent dot */
+  box-shadow: 0 0 8px rgba(212, 175, 55, 0.8);
+}
+
+/* ── Left Rail Stage Scrubber ─────────────────────────────── */
+
+.stageScrubber {
+  position: fixed;
+  left: clamp(1rem, 3vw, 2.5rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 25;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  pointer-events: auto;
+}
+
+.scrubBtn {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: none;
+  border: none;
+  padding: 0.2rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.scrubBar {
+  width: 2px;
+  height: 24px;
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 1px;
+  transition: all 0.25s ease;
+}
+
+.scrubBtn.active .scrubBar {
+  background: #d4af37;
+  height: 34px;
+  box-shadow: 0 0 10px rgba(212, 175, 55, 0.6);
+}
+
+.scrubLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.35);
+  transition: color 0.2s ease;
+}
+
+.scrubBtn.active .scrubLabel {
+  color: #f4f5f6;
+  font-weight: 600;
+}
+
+.scrubBtn:hover .scrubLabel {
+  color: #d4af37;
+}
+
+/* ── Editorial Story Track (Overlaid and Synchronized) ─────── */
+
+.storyTrack {
+  position: relative;
+  z-index: 10;
+  margin-top: -100vh; /* Sits naturally over the sticky canvas runway */
+  width: 100%;
+  pointer-events: none;
+}
+
+.chapterSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  padding: clamp(6rem, 12vh, 9rem) clamp(1.5rem, 5vw, 4rem);
+  box-sizing: border-box;
+  pointer-events: none;
+}
+
+.editorialColumn {
+  width: 100%;
+  max-width: 580px;
+  background: rgba(16, 22, 32, 0.78);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: clamp(1.6rem, 3.5vw, 2.4rem);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  pointer-events: auto;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.4);
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.chapterBadge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #d4af37;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.chapterTitle {
+  font-size: clamp(1.4rem, 2.5vw, 2rem);
+  font-weight: 800;
+  color: #ffffff;
+  line-height: 1.2;
+  margin: 0;
+  letter-spacing: -0.02em;
+}
+
+.chapterNarrative {
+  font-size: var(--text-sm);
+  color: #9aa4b2;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Embedded Real Engineering Artifact Box ──────────────── */
+
+.artifactBox {
+  background: rgba(10, 14, 22, 0.7);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 1rem;
+  margin-top: 0.25rem;
+}
+
+.artifactHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #a4b4c4;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  margin-bottom: 0.75rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.4rem;
+}
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin-top: 0.5rem;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metricLabel {
+  font-family: var(--font-mono);
+  font-size: 0.62rem;
+  color: #7b8898;
+  text-transform: uppercase;
+}
+
+.metricValue {
+  font-family: var(--font-mono);
+  font-size: 0.78rem;
+  color: #f4f5f6;
+  font-weight: 600;
+}
+
+/* ── Project Case Study Direct Action Links ───────────────── */
+
+.projectLinkRow {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  margin-top: 0.4rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.viewCaseStudyBtn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.82rem;
+  font-weight: 600;
+  color: #d4af37;
+  text-decoration: none;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.viewCaseStudyBtn:hover {
+  color: #e8c65a;
+  transform: translateX(3px);
+}
+
+.repoBadge {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: #9aa4b2;
+  text-decoration: none;
+  padding: 0.25rem 0.6rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.2s ease;
+}
+
+.repoBadge:hover {
+  background: rgba(255, 255, 255, 0.08);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+/* ── Fallback Mode for Reduced Motion / Non-WebGL ─────────── */
+
+.fallbackContainer {
+  padding: 6rem clamp(1.5rem, 5vw, 4rem) 4rem;
+  max-width: 1000px;
+  margin-inline: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
+}
+
+.fallbackCard {
+  background: rgba(22, 31, 44, 0.85);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-md);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* ── Responsive Adaptations ───────────────────────────────── */
+
+@media (max-width: 960px) {
+  .stageScrubber {
+    display: none;
+  }
+
+  .chapterSection {
+    padding-inline: 1.25rem;
+    min-height: auto;
+    padding-block: 5rem;
+  }
+
+  .editorialColumn {
+    max-width: 100%;
+  }
+
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+}

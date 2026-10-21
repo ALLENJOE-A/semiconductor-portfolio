@@ -1,0 +1,10 @@
+.page { min-height: 100vh; display: flex; align-items: center; justify-content: center; background: var(--color-deep-navy); padding: 2rem; }
+.content { text-align: center; display: flex; flex-direction: column; align-items: center; gap: 1rem; }
+.code { font-family: var(--font-mono); font-size: var(--text-3xl); color: var(--accent-secondary); letter-spacing: 0.2em; line-height: 1; }
+.title { font-size: var(--text-2xl); color: var(--color-technical-white); }
+.desc { font-size: var(--text-md); color: var(--color-silicon-silver); max-width: 360px; }
+.actions { display: flex; gap: 1rem; margin-top: 1rem; flex-wrap: wrap; justify-content: center; }
+.primary { display: inline-flex; padding: 0.7rem 1.6rem; background: var(--accent-primary); color: #fff; font-weight: 600; font-size: var(--text-sm); border-radius: var(--radius-sm); text-decoration: none !important; transition: background var(--duration-fast); }
+.primary:hover { background: #1a6af0; }
+.secondary { display: inline-flex; padding: 0.7rem 1.4rem; border: 1px solid rgba(255,255,255,0.18); color: var(--color-silicon-white); font-weight: 500; font-size: var(--text-sm); border-radius: var(--radius-sm); text-decoration: none !important; transition: border-color var(--duration-fast); }
+.secondary:hover { border-color: var(--accent-secondary); }

@@ -1,0 +1,547 @@
+/* ============================================================
+   HOME PAGE STYLES — FULL-LENGTH IMMERSIVE EXPERIENCE
+   Centred Content, Rich Materials, Editorial Typography
+   ============================================================ */
+
+.pageRoot {
+  position: relative;
+  width: 100%;
+  color: #f4f5f6;
+  min-height: 100vh;
+}
+
+.contentWrapper {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+}
+
+/* ── Global Section Base ──────────────────────────────────── */
+
+.section {
+  position: relative;
+  width: 100%;
+  padding-block: clamp(5rem, 10vh, 8rem);
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.centeredContainer {
+  width: 100%;
+  max-width: 980px;
+  padding-inline: clamp(1.5rem, 5vw, 3rem);
+  margin-inline: auto;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  gap: 2.2rem;
+}
+
+/* ── Section 1: Hero Personal Introduction (100vh) ────────── */
+
+.heroSection {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding-block: clamp(6rem, 15vh, 9rem);
+  box-sizing: border-box;
+}
+
+.heroContent {
+  width: 100%;
+  max-width: 880px;
+  margin-inline: auto;
+  padding-inline: clamp(1.5rem, 5vw, 3rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.heroBadge {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: #d4af37; /* Warm Champagne Gold */
+  background: rgba(212, 175, 55, 0.1);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  padding: 0.4rem 1.1rem;
+  border-radius: var(--radius-sm);
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.heroName {
+  font-family: var(--font-display);
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  font-weight: 900;
+  letter-spacing: -0.03em;
+  color: #ffffff;
+  line-height: 1.05;
+  margin: 0;
+  text-shadow: 0 4px 24px rgba(0, 0, 0, 0.7);
+}
+
+.heroHeadline {
+  font-size: clamp(1.2rem, 2.2vw, 1.7rem);
+  font-weight: 500;
+  color: #e2e8f0;
+  line-height: 1.35;
+  max-width: 760px;
+  margin: 0;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+}
+
+.heroBio {
+  font-size: clamp(0.95rem, 1.4vw, 1.12rem);
+  color: #9aa4b2;
+  line-height: 1.65;
+  max-width: 680px;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
+}
+
+.heroActions {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 0.75rem;
+}
+
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: #d4af37;
+  color: #0b111a;
+  font-weight: 700;
+  font-size: 0.88rem;
+  padding: 0.8rem 1.6rem;
+  border-radius: var(--radius-sm);
+  text-decoration: none !important;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 16px rgba(212, 175, 55, 0.25);
+}
+
+.btnPrimary:hover {
+  background: #e5c158;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(212, 175, 55, 0.35);
+}
+
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background: rgba(22, 31, 44, 0.8);
+  color: #f4f5f6;
+  font-weight: 600;
+  font-size: 0.88rem;
+  padding: 0.8rem 1.5rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.16);
+  text-decoration: none !important;
+  backdrop-filter: blur(12px);
+  transition: all 0.2s ease;
+}
+
+.btnSecondary:hover {
+  background: rgba(30, 42, 60, 0.95);
+  border-color: #d4af37;
+  color: #d4af37;
+  transform: translateY(-2px);
+}
+
+.heroSocialLinks {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.socialLink {
+  font-family: var(--font-mono);
+  font-size: 0.75rem;
+  color: #9aa4b2;
+  text-decoration: none !important;
+  letter-spacing: 0.06em;
+  transition: color 0.2s ease;
+}
+
+.socialLink:hover {
+  color: #ffffff;
+}
+
+.scrollCue {
+  margin-top: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.4rem;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: rgba(212, 175, 55, 0.8);
+  animation: floatBounce 2.4s infinite ease-in-out;
+}
+
+@keyframes floatBounce {
+  0%, 100% { transform: translateY(0); }
+  50% { transform: translateY(6px); }
+}
+
+/* ── Section Headers ──────────────────────────────────────── */
+
+.sectionHeader {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  text-align: center;
+  max-width: 720px;
+  margin-inline: auto;
+}
+
+.sectionPill {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #d4af37;
+  font-weight: 600;
+}
+
+.sectionTitle {
+  font-size: clamp(1.8rem, 3.5vw, 2.7rem);
+  font-weight: 800;
+  color: #ffffff;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  margin: 0;
+  text-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
+}
+
+.sectionSubtitle {
+  font-size: var(--text-md);
+  color: #9aa4b2;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Card Containers (Substantial, Centred, Frosted) ───────── */
+
+.frostedCard {
+  background: rgba(18, 25, 36, 0.82);
+  border: 1px solid rgba(255, 255, 255, 0.09);
+  border-radius: var(--radius-md);
+  padding: clamp(1.8rem, 4vw, 2.6rem);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.5);
+  display: flex;
+  flex-direction: column;
+  gap: 1.4rem;
+  position: relative;
+  overflow: hidden;
+}
+
+.cardTopAccent {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--card-accent, #d4af37);
+}
+
+.cardHeaderRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.cardTag {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #d4af37;
+}
+
+.cardStatus {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  padding: 3px 8px;
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.06);
+  color: #c5ccd6;
+}
+
+.cardMainTitle {
+  font-size: clamp(1.3rem, 2.4vw, 1.85rem);
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.cardDescription {
+  font-size: 0.95rem;
+  color: #a4b2c2;
+  line-height: 1.65;
+  margin: 0;
+}
+
+/* ── Visual Artifact Frame ────────────────────────────────── */
+
+.artifactFrame {
+  background: rgba(11, 15, 23, 0.75);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-sm);
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.artifactTitleRow {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: #8fa0b5;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.06);
+  padding-bottom: 0.5rem;
+}
+
+/* ── Metrics Grid ─────────────────────────────────────────── */
+
+.metricsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  padding-top: 0.5rem;
+}
+
+.metricItem {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-sm);
+}
+
+.metricLabel {
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  color: #7b8b9e;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+.metricValue {
+  font-family: var(--font-mono);
+  font-size: 0.95rem;
+  font-weight: 700;
+  color: #f4f5f6;
+}
+
+/* ── Card Footer Actions ──────────────────────────────────── */
+
+.cardFooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  flex-wrap: wrap;
+  padding-top: 1rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.linkDetail {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.45rem;
+  font-weight: 600;
+  font-size: 0.88rem;
+  color: #d4af37;
+  text-decoration: none !important;
+  transition: transform 0.2s ease, color 0.2s ease;
+}
+
+.linkDetail:hover {
+  color: #f0cb64;
+  transform: translateX(4px);
+}
+
+.linkRepo {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #a4b2c2;
+  text-decoration: none !important;
+  padding: 0.35rem 0.8rem;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: var(--radius-sm);
+  background: rgba(255, 255, 255, 0.03);
+  transition: all 0.2s ease;
+}
+
+.linkRepo:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #ffffff;
+  border-color: rgba(255, 255, 255, 0.3);
+}
+
+/* ── Grid of 4 Engineering Interests Pillars ──────────────── */
+
+.interestsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.25rem;
+}
+
+.interestCard {
+  background: rgba(18, 25, 36, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.6rem;
+  backdrop-filter: blur(14px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.interestCard:hover {
+  transform: translateY(-3px);
+  border-color: rgba(212, 175, 55, 0.35);
+}
+
+.interestNum {
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  color: #d4af37;
+  letter-spacing: 0.1em;
+}
+
+.interestTitle {
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+  line-height: 1.3;
+}
+
+.interestText {
+  font-size: 0.88rem;
+  color: #9aa4b2;
+  line-height: 1.55;
+  margin: 0;
+}
+
+/* ── Technical Domains & Tools ────────────────────────────── */
+
+.toolsChipGrid {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.65rem;
+}
+
+.toolChip {
+  font-family: var(--font-mono);
+  font-size: 0.8rem;
+  padding: 0.45rem 1rem;
+  background: rgba(22, 31, 44, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: var(--radius-sm);
+  color: #e2e8f0;
+  backdrop-filter: blur(8px);
+}
+
+/* ── Education Timeline Card ──────────────────────────────── */
+
+.milestoneCard {
+  background: rgba(18, 25, 36, 0.8);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: var(--radius-md);
+  padding: 1.8rem 2.2rem;
+  backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.milestoneDegree {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0;
+}
+
+.milestoneCoursework {
+  font-size: 0.9rem;
+  color: #9aa4b2;
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* ── Contact Section ──────────────────────────────────────── */
+
+.contactCard {
+  background: rgba(18, 25, 36, 0.85);
+  border: 1px solid rgba(212, 175, 55, 0.25);
+  border-radius: var(--radius-md);
+  padding: clamp(2rem, 5vw, 3.5rem);
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  box-shadow: 0 24px 48px rgba(0, 0, 0, 0.6);
+}
+
+.contactActions {
+  display: flex;
+  justify-content: center;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+}
+
+/* ── Responsive Adaptations ───────────────────────────────── */
+
+@media (max-width: 768px) {
+  .heroContent {
+    padding-inline: 1.25rem;
+  }
+
+  .heroName {
+    font-size: 2.6rem;
+  }
+
+  .heroHeadline {
+    font-size: 1.2rem;
+  }
+
+  .metricsGrid {
+    grid-template-columns: 1fr;
+  }
+
+  .contactCard {
+    padding: 1.75rem 1.25rem;
+  }
+}

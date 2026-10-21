@@ -1,0 +1,7 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" fill="none">
+  <circle cx="32" cy="32" r="30" fill="#081521" stroke="#2E7BFF" stroke-width="1.5"/>
+  <circle cx="32" cy="32" r="22" fill="none" stroke="#5CE1E6" stroke-width="0.5" stroke-dasharray="3 2"/>
+  <circle cx="32" cy="32" r="14" fill="none" stroke="#2E7BFF" stroke-width="0.5" stroke-dasharray="3 2"/>
+  <circle cx="32" cy="32" r="6"  fill="none" stroke="#C88752" stroke-width="0.5" stroke-dasharray="2 2"/>
+  <text x="32" y="35" text-anchor="middle" font-family="monospace" font-size="7" font-weight="bold" fill="#BFC8D0">Si</text>
+</svg>

@@ -1,0 +1,443 @@
+/* ============================================================
+   SEMICONDUCTOR JOURNEY STYLES
+   Full-screen scroll-driven continuous 3D experience
+   ============================================================ */
+
+.runway {
+  position: relative;
+  width: 100%;
+  height: 520vh; /* Scroll runway for continuous 5-stage transformation */
+  background: #050811;
+  color: #f3f4f1;
+}
+
+.stickyViewport {
+  position: sticky;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at 50% 45%, #0d1a29 0%, #050811 85%, #020408 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.canvasContainer {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+/* ── HUD Overlays ─────────────────────────────────────────── */
+
+.hudHeader {
+  position: absolute;
+  top: 5.5rem;
+  left: clamp(1.2rem, 4vw, 3rem);
+  right: clamp(1.2rem, 4vw, 3rem);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  pointer-events: none;
+}
+
+.hudBrand {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+
+.hudName {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-electric-cyan);
+  font-weight: 700;
+}
+
+.hudRole {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.7);
+  letter-spacing: 0.04em;
+}
+
+.hudStageBadge {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background: rgba(13, 26, 41, 0.75);
+  border: 1px solid rgba(92, 225, 230, 0.25);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  padding: 0.45rem 0.9rem;
+  border-radius: var(--radius-sm);
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  color: var(--color-technical-white);
+  pointer-events: auto;
+}
+
+.hudPulse {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--color-electric-cyan);
+  box-shadow: 0 0 10px var(--color-electric-cyan);
+  animation: pulseDot 2s infinite ease-in-out;
+}
+
+@keyframes pulseDot {
+  0%, 100% { opacity: 0.5; transform: scale(0.9); }
+  50% { opacity: 1; transform: scale(1.25); }
+}
+
+/* ── Scrubber Rail (Left) ─────────────────────────────────── */
+
+.scrubberRail {
+  position: absolute;
+  left: clamp(1.2rem, 4vw, 3rem);
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+  pointer-events: auto;
+}
+
+.scrubberItem {
+  display: flex;
+  align-items: center;
+  gap: 0.85rem;
+  background: none;
+  border: none;
+  padding: 0.2rem;
+  cursor: pointer;
+  text-align: left;
+  transition: all 0.25s ease;
+}
+
+.scrubberIndicator {
+  width: 2px;
+  height: 28px;
+  background: rgba(255, 255, 255, 0.16);
+  border-radius: 1px;
+  transition: all 0.3s ease;
+  position: relative;
+}
+
+.scrubberItem.active .scrubberIndicator {
+  background: var(--color-electric-cyan);
+  box-shadow: 0 0 12px var(--color-electric-cyan);
+  width: 3px;
+  height: 38px;
+}
+
+.scrubberLabel {
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(255, 255, 255, 0.4);
+  transition: color 0.25s ease;
+  white-space: nowrap;
+}
+
+.scrubberItem.active .scrubberLabel {
+  color: var(--color-technical-white);
+  font-weight: 600;
+}
+
+.scrubberItem:hover .scrubberLabel {
+  color: var(--color-electric-cyan);
+}
+
+/* ── Technical Telemetry Bar (Bottom) ─────────────────────── */
+
+.telemetryPanel {
+  position: absolute;
+  bottom: 2.2rem;
+  left: clamp(1.2rem, 4vw, 3rem);
+  right: clamp(1.2rem, 4vw, 3rem);
+  z-index: 10;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  pointer-events: none;
+  gap: 2rem;
+}
+
+.telemetryLeft {
+  max-width: 580px;
+}
+
+.stageTitle {
+  font-family: var(--font-mono);
+  font-size: var(--text-xs);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--color-electric-cyan);
+  margin-bottom: 0.35rem;
+}
+
+.stageDesc {
+  font-size: var(--text-sm);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin: 0;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.8);
+}
+
+.telemetryReadout {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: rgba(92, 225, 230, 0.7);
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  line-height: 1.6;
+  text-align: right;
+  background: rgba(5, 8, 17, 0.6);
+  padding: 0.5rem 0.8rem;
+  border-radius: var(--radius-sm);
+  border: 1px solid rgba(255, 255, 255, 0.06);
+  backdrop-filter: blur(8px);
+}
+
+.telemetryVal {
+  color: var(--color-technical-white);
+  font-weight: 600;
+}
+
+/* ── Scroll Prompt ────────────────────────────────────────── */
+
+.scrollPrompt {
+  position: absolute;
+  bottom: 2.5rem;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  font-family: var(--font-mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--color-electric-cyan);
+  pointer-events: none;
+  transition: opacity 0.4s ease;
+}
+
+.scrollMouse {
+  width: 20px;
+  height: 32px;
+  border: 2px solid rgba(92, 225, 230, 0.6);
+  border-radius: 10px;
+  position: relative;
+}
+
+.scrollWheel {
+  width: 2px;
+  height: 6px;
+  background: var(--color-electric-cyan);
+  border-radius: 1px;
+  position: absolute;
+  top: 5px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: wheelScroll 1.8s infinite ease;
+}
+
+@keyframes wheelScroll {
+  0% { transform: translate(-50%, 0); opacity: 1; }
+  100% { transform: translate(-50%, 14px); opacity: 0; }
+}
+
+/* ── Stage E: Project Portals Overlay ─────────────────────── */
+
+.projectPortalsOverlay {
+  position: absolute;
+  inset: 0;
+  z-index: 15;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  pointer-events: none;
+  padding: 5rem 1.5rem 6rem;
+  transition: opacity 0.4s ease;
+}
+
+.projectPortalsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.25rem;
+  width: 100%;
+  max-width: 1200px;
+  pointer-events: auto;
+}
+
+.portalCard {
+  background: rgba(8, 21, 33, 0.88);
+  border: 1px solid rgba(92, 225, 230, 0.28);
+  border-radius: var(--radius-md);
+  padding: 1.2rem 1.3rem;
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  display: flex;
+  flex-direction: column;
+  gap: 0.65rem;
+  text-decoration: none;
+  color: inherit;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+  overflow: hidden;
+}
+
+.portalCard::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: var(--card-accent, var(--color-electric-cyan));
+}
+
+.portalCard:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-electric-cyan);
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.5), 0 0 20px rgba(92, 225, 230, 0.2);
+}
+
+.portalMeta {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-family: var(--font-mono);
+  font-size: 0.65rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+}
+
+.portalCategory {
+  color: var(--color-electric-cyan);
+}
+
+.portalStatus {
+  color: var(--color-silicon-silver);
+  font-size: 0.6rem;
+  background: rgba(255, 255, 255, 0.05);
+  padding: 2px 6px;
+  border-radius: 2px;
+}
+
+.portalTitle {
+  font-size: 1.05rem;
+  font-weight: 700;
+  color: var(--color-technical-white);
+  margin: 0;
+  line-height: 1.3;
+}
+
+.portalSummary {
+  font-size: 0.82rem;
+  color: rgba(255, 255, 255, 0.72);
+  line-height: 1.45;
+  margin: 0;
+}
+
+.portalFoot {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 0.35rem;
+  padding-top: 0.5rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.07);
+  font-family: var(--font-mono);
+  font-size: 0.68rem;
+  color: var(--color-electric-cyan);
+}
+
+.portalLinkIcon {
+  transition: transform 0.2s ease;
+}
+
+.portalCard:hover .portalLinkIcon {
+  transform: translateX(4px);
+}
+
+/* ── Fallback Mode for Reduced Motion / Non-WebGL ─────────── */
+
+.fallbackWrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 7rem 2rem 5rem;
+  background: #050811;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.fallbackHeader {
+  text-align: center;
+  max-width: 720px;
+}
+
+.fallbackGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  width: 100%;
+  max-width: 1200px;
+}
+
+.fallbackStageCard {
+  background: #0d1a29;
+  border: 1px solid rgba(92, 225, 230, 0.25);
+  border-radius: var(--radius-md);
+  padding: 1.5rem;
+}
+
+/* ── Responsive Rules ─────────────────────────────────────── */
+
+@media (max-width: 900px) {
+  .scrubberRail {
+    display: none; /* Hide scrubber rail on compact viewports to maintain immersion */
+  }
+
+  .telemetryPanel {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 0.75rem;
+    bottom: 1.25rem;
+  }
+
+  .telemetryReadout {
+    align-items: flex-start;
+    text-align: left;
+  }
+
+  .hudHeader {
+    top: 4.8rem;
+  }
+
+  .projectPortalsGrid {
+    grid-template-columns: 1fr;
+    max-height: 65vh;
+    overflow-y: auto;
+    padding-right: 0.5rem;
+  }
+}

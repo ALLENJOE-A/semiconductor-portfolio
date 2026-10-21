@@ -1,0 +1,84 @@
+/* ============================================
+   DESIGN TOKENS — Semiconductor Portfolio
+   ============================================ */
+:root {
+  /* ---- Core Palette ---- */
+  --color-silicon-white:   #F3F4F1;
+  --color-technical-white: #FFFFFF;
+  --color-graphite:        #171A1D;
+  --color-deep-navy:       #081521;
+  --color-semi-blue:       #2E7BFF;
+  --color-electric-cyan:   #5CE1E6;
+  --color-silicon-silver:  #BFC8D0;
+  --color-warm-copper:     #C88752;
+  --color-mid-navy:        #0D2035;
+
+  /* ---- Semantic Colours (light env default) ---- */
+  --bg-primary:       var(--color-silicon-white);
+  --bg-dark:          var(--color-deep-navy);
+  --bg-graphite:      var(--color-graphite);
+  --text-primary:     var(--color-graphite);
+  --text-secondary:   #4A5568;
+  --text-on-dark:     var(--color-silicon-white);
+  --text-muted-dark:  var(--color-silicon-silver);
+  --accent-primary:   var(--color-semi-blue);
+  --accent-secondary: var(--color-electric-cyan);
+  --accent-copper:    var(--color-warm-copper);
+  --border-light:     rgba(0,0,0,0.08);
+  --border-dark:      rgba(255,255,255,0.10);
+
+  /* ---- Typography ---- */
+  --font-display: 'Inter', system-ui, sans-serif;
+  --font-body:    'Inter', system-ui, sans-serif;
+  --font-mono:    'JetBrains Mono', 'Fira Code', 'Courier New', monospace;
+
+  /* ---- Fluid Type Scale ---- */
+  --text-xs:   clamp(0.65rem,  0.60rem  + 0.25vw, 0.75rem);
+  --text-sm:   clamp(0.80rem,  0.75rem  + 0.25vw, 0.875rem);
+  --text-base: clamp(0.90rem,  0.85rem  + 0.25vw, 1rem);
+  --text-md:   clamp(1.00rem,  0.90rem  + 0.50vw, 1.125rem);
+  --text-lg:   clamp(1.10rem,  0.95rem  + 0.75vw, 1.35rem);
+  --text-xl:   clamp(1.30rem,  1.00rem  + 1.50vw, 2rem);
+  --text-2xl:  clamp(1.80rem,  1.20rem  + 2.50vw, 3rem);
+  --text-3xl:  clamp(2.50rem,  1.50rem  + 4.00vw, 5rem);
+  --text-hero: clamp(3.00rem,  2.00rem  + 5.00vw, 7rem);
+
+  /* ---- Spacing ---- */
+  --space-1:  0.25rem;
+  --space-2:  0.50rem;
+  --space-3:  0.75rem;
+  --space-4:  1.00rem;
+  --space-6:  1.50rem;
+  --space-8:  2.00rem;
+  --space-12: 3.00rem;
+  --space-16: 4.00rem;
+  --space-24: 6.00rem;
+  --space-32: 8.00rem;
+  --space-section: clamp(4rem, 8vw, 10rem);
+
+  /* ---- Layout ---- */
+  --max-width:     1440px;
+  --content-width: 1200px;
+  --narrow-width:  760px;
+
+  /* ---- Radius ---- */
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 16px;
+
+  /* ---- Z-Index ---- */
+  --z-base:    0;
+  --z-canvas:  1;
+  --z-content: 10;
+  --z-overlay: 20;
+  --z-nav:     100;
+  --z-modal:   200;
+
+  /* ---- Easing & Duration ---- */
+  --ease-out-expo:     cubic-bezier(0.16, 1, 0.3, 1);
+  --ease-in-out-circ:  cubic-bezier(0.85, 0, 0.15, 1);
+  --duration-fast:     150ms;
+  --duration-normal:   300ms;
+  --duration-slow:     600ms;
+  --duration-cinematic:1200ms;
+}
