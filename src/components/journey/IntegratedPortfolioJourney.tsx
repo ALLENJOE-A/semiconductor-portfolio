@@ -54,7 +54,7 @@ const CHAPTERS = [
     project: {
       id: 'tcad-jltfet',
       title: 'Sub-10nm TCAD Device Physics & FE-JLTFET',
-      repoUrl: 'https://github.com/ALLENJOE-A/tcad-jltfet-biosensor',
+      repoUrl: 'https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD',
     },
     range: [0.20, 0.40],
   },
@@ -74,7 +74,7 @@ const CHAPTERS = [
     project: {
       id: 'tcad-jltfet',
       title: 'FE-DGDM-JLTFET TCAD Simulation Model',
-      repoUrl: 'https://github.com/ALLENJOE-A/tcad-jltfet-biosensor',
+      repoUrl: 'https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD',
     },
     range: [0.40, 0.60],
   },
@@ -95,12 +95,12 @@ const CHAPTERS = [
       {
         id: 'burst-dma',
         title: '4-Channel Adaptive Burst DMA Controller',
-        repoUrl: 'https://github.com/ALLENJOE-A/adaptive-burst-dma-controller',
+        repoUrl: 'https://github.com/ALLENJOE-A/4-Channel-Adaptive-Burst-DMA-Controller-with-Hardware-Performance-Monitoring',
       },
       {
         id: 'gs-adpll',
         title: 'Gain-Scheduled All-Digital PLL (GS-ADPLL)',
-        repoUrl: 'https://github.com/ALLENJOE-A/gs-adpll-core',
+        repoUrl: 'https://github.com/ALLENJOE-A/Gear-Shifting-All-Digital-Phase-Locked-Loop',
       },
     ],
     range: [0.60, 0.80],
@@ -122,12 +122,12 @@ const CHAPTERS = [
       {
         id: 'litho-gnn',
         title: 'Computational Lithography OPC via GNN',
-        repoUrl: 'https://github.com/ALLENJOE-A/gnn-computational-lithography',
+        repoUrl: 'https://github.com/ALLENJOE-A/GNN-T_Edge-Error-Prediction-for-Computational-Lithography',
       },
       {
         id: 'hotspot-gnn',
         title: 'Explainable IR Drop & Thermal Hotspot Predictor',
-        repoUrl: 'https://github.com/ALLENJOE-A/explainable-hotspot-gnn',
+        repoUrl: 'https://github.com/ALLENJOE-A/CNN-Driven-Explainable-AI-for-Lithography-Hotspot-Detection',
       },
     ],
     range: [0.80, 1.00],
@@ -374,7 +374,7 @@ export function IntegratedPortfolioJourney() {
                 Explore TCAD Device Research →
               </Link>
               <a
-                href="https://github.com/ALLENJOE-A/tcad-jltfet-biosensor"
+                href="https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.repoBadge}
@@ -416,7 +416,7 @@ export function IntegratedPortfolioJourney() {
                 View Biosensor Case Study &amp; Physics →
               </Link>
               <a
-                href="https://github.com/ALLENJOE-A/tcad-jltfet-biosensor"
+                href="https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD"
                 target="_blank"
                 rel="noopener noreferrer"
                 className={styles.repoBadge}

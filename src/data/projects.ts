@@ -68,7 +68,7 @@ export const PROJECTS: Project[] = [
     featured: true,
     featuredOrder: 1,
     category: ['Digital Design & RTL', 'ASIC & VLSI'],
-    repoUrl: 'https://github.com/ALLENJOE-A/gs-adpll-core',
+    repoUrl: 'https://github.com/ALLENJOE-A/Gear-Shifting-All-Digital-Phase-Locked-Loop',
     summary:
       'All-digital phase-locked loop (ADPLL) implementing dynamic gain-scheduled loop filter parameters to simultaneously optimize rapid phase acquisition and steady-state jitter performance, evaluated through OpenROAD physical design flow.',
     problem:

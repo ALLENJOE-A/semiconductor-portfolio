@@ -28,7 +28,7 @@ of every substantive claim published on the portfolio website.
 
 ### Gain-Scheduled All-Digital PLL (GS-ADPLL) & RTL-to-GDS Flow
 
-**Repository:** https://github.com/ALLENJOE-A/gs-adpll-core  
+**Repository:** https://github.com/ALLENJOE-A/Gear-Shifting-All-Digital-Phase-Locked-Loop  
 **Status:** Completed (RTL & Synthesis Flow)  
 **Languages / Tools:** SystemVerilog, Verilog, OpenROAD, Yosys, SkyWater 130nm PDK
 

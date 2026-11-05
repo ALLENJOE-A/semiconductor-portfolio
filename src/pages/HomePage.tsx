@@ -363,7 +363,7 @@ export default function HomePage() {
                   View ADPLL Architecture Case Study →
                 </Link>
                 <a
-                  href="https://github.com/ALLENJOE-A/gs-adpll-core"
+                  href="https://github.com/ALLENJOE-A/Gear-Shifting-All-Digital-Phase-Locked-Loop"
                   target="_blank"
                   rel="noopener noreferrer"
                   className={styles.linkRepo}
