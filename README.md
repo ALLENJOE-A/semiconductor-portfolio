@@ -5,109 +5,66 @@
 [![GitHub Profile](https://img.shields.io/badge/GitHub-ALLENJOE--A-268BFF?style=flat&logo=github)](https://github.com/ALLENJOE-A)
 [![Resume Download](https://img.shields.io/badge/Resume-PDF_Download-00D9FF?style=flat&logo=adobeacrobatreader)](https://allenjoe-a.github.io/semiconductor-portfolio/resume.pdf)
 
-> Interactive, evidence-backed semiconductor engineering portfolio showcasing Digital RTL Design, ASIC Microarchitecture, Physical Design (OpenROAD), Semiconductor Device Modelling (Sentaurus TCAD), and AI for EDA.
+Personal engineering portfolio of **Allen Joe A**, Bachelor of Technology (B.Tech) in Electronics & VLSI Engineering at the School of Electronics Engineering (SENSE), Vellore Institute of Technology (VIT), Chennai.
 
-**🌐 Live Production Website:** [https://allenjoe-a.github.io/semiconductor-portfolio/](https://allenjoe-a.github.io/semiconductor-portfolio/)
+Focused on ASIC Physical Design, RTL Microarchitecture, Built-In Self-Test (DFT), TCAD Device Physics, and Computational AI in EDA.
+
+**🌐 Live Site:** [https://allenjoe-a.github.io/semiconductor-portfolio/](https://allenjoe-a.github.io/semiconductor-portfolio/)
 
 ---
 
-## 🔬 Featured Engineering Case Studies
+## 🔬 Featured Engineering Projects
 
-1. **[Gain-Scheduled All-Digital PLL (GS-ADPLL) & RTL-to-GDS Flow](https://github.com/ALLENJOE-A/Gear-Shifting-All-Digital-Phase-Locked-Loop)**
-   - Dual-mode gain-scheduled Digital Loop Filter (DLF) combining high-bandwidth acquisition (sub-100 cycle lock at 85 simulated cycles) with low-bandwidth tracking (1.8 ps RMS phase jitter in behavioral simulation).
-   - Synthesizable Verilog RTL evaluated through OpenROAD / SkyWater 130nm PDK standard-cell physical design flow.
-   - *Status: RTL Implemented & Simulation Verified*
+1. **[4-Channel Adaptive Burst DMA Controller](https://github.com/ALLENJOE-A/4-Channel-Adaptive-Burst-DMA-Controller-with-Hardware-Performance-Monitoring)**
+   - Pure Verilog RTL DMA engine featuring round-robin channel arbitration, dynamic burst sizing (1, 4, 8, 16-word INCR bursts), and non-intrusive 64-bit performance counters.
+   - 6,266 automated self-checking verification checks (0 errors); 5.61% cycle reduction and 50% burst overhead reduction on 512-word transfers.
 
-2. **[4-Channel Adaptive Burst DMA Controller](https://github.com/ALLENJOE-A/4-Channel-Adaptive-Burst-DMA-Controller-with-Hardware-Performance-Monitoring)**
-   - Pure Verilog RTL DMA engine featuring round-robin channel arbitration, dynamic burst sizing (1/4/8/16-word INCR bursts), and non-intrusive 64-bit performance counters.
-   - Thoroughly verified via self-checking testbench with 6,266 automated verification checks (0 errors); achieved 5.61% cycle reduction and 50% burst overhead reduction on 512-word transfers.
-   - *Status: RTL Implemented & Verified*
+2. **[Gain-Scheduled All-Digital PLL (GS-ADPLL) & RTL-to-GDS Flow](https://github.com/ALLENJOE-A/Gear-Shifting-All-Digital-Phase-Locked-Loop)**
+   - Dual-mode gain-scheduled Digital Loop Filter (DLF) combining rapid acquisition (28 reference cycles) with narrow-bandwidth tracking (0.8–3.1 ps C2C jitter; 91.9% jitter reduction at optimal K=8 knee; 87.5% loop filter activity reduction).
+   - Full synthesizable Verilog RTL hierarchy (`adpll_top`, `pfd`, `dlf_top`, `gear_ctrl`, `prop_path`, `integ_path`, `lock_det`, `dco_core`, `div_n`) evaluated through Cadence Genus, Innovus, and Voltus vector power analysis.
 
 3. **[Low-Power 16-Bit MAC BIST Architecture](https://github.com/ALLENJOE-A/Low-Power-MAC-BIST-PPA-Fault-Coverage)**
-   - Comparative evaluation of low-transition Built-In Self-Test (BIST) architectures for a 16-bit Multiply-Accumulate (MAC) datapath.
-   - Evaluates power, performance, area (PPA), test application duration, and stuck-at fault coverage across candidate LFSR generator topologies.
-   - *Status: Simulation & Synthesis Completed*
+   - Synthesizable 16-bit Multiply-Accumulate (MAC) datapath evaluated alongside low-transition Built-In Self-Test (BIST) architectures.
+   - Synthesized in Cadence Genus 21.1 under 100 MHz constraint; fault simulation in Cadence Incisive achieving 99.8980% stuck-at fault coverage across 1,960 faults.
 
 4. **[GNN-T Edge Error Prediction for Computational Lithography](https://github.com/ALLENJOE-A/GNN-T_Edge-Error-Prediction-for-Computational-Lithography)**
-   - Hybrid Graph Neural Network + Transformer architecture predicting sub-resolution Edge Placement Errors (EPE) from non-Euclidean layout geometries.
-   - Physics-inspired research prototype evaluated on 2D scalar Fourier-optics simulation graphs to accelerate optical proximity correction (OPC) exploration.
-   - *Status: Research Prototype*
+   - E(n)-Equivariant Graph Neural Network (EGNN) and Graph Transformer predicting sub-resolution Edge Placement Errors (EPE) from layout polygon topologies to accelerate Optical Proximity Correction (OPC).
 
-5. **[CNN-Driven Explainable AI for Lithography Hotspot Detection](https://github.com/ALLENJOE-A/CNN-Driven-Explainable-AI-for-Lithography-Hotspot-Detection)**
-   - Deep CNN layout classifier trained on ICCAD-12 benchmarks to detect lithography pinching and bridging hotspots.
-   - Integrates Grad-CAM gradient saliency maps to visualize critical layout contours and provide explainable model attribution.
-   - *Status: Research Prototype*
+5. **[FE-DGDM-JLTFET Biosensor TCAD](https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD)**
+   - Synopsys Sentaurus TCAD modeling of ferroelectric negative-capacitance junctionless TFET for label-free biomolecular detection ($I_{on} = 0.804\text{ mA}$, $I_{on}/I_{off} = 7.24 \times 10^8$, 18.14% sensitivity).
 
-6. **[FE-DGDM-JLTFET Biosensor TCAD](https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD)**
-   - Double-gate junctionless tunnel FET integrating ferroelectric negative capacitance (HZO) and dielectric-modulated nanocavity for label-free biomolecular detection.
-   - Calibrated 2D/3D Sentaurus TCAD simulation evaluating subthreshold swing steepening and biomolecule sensitivity metrics.
-   - *Status: Simulation Completed*
+6. **[DG Source-Pocket Engineered Vertical TFET](https://github.com/ALLENJOE-A/DG-Source-Pocket-Engineered-Vertical-TFET)**
+   - Steep subthreshold swing ($34.2\text{ mV/dec}$) device optimization with narrow-bandgap heterojunction source pocket and high-k dielectric stack in Sentaurus TCAD.
 
-7. **[DG Source-Pocket Engineered Vertical TFET](https://github.com/ALLENJOE-A/DG-Source-Pocket-Engineered-Vertical-TFET)**
-   - Synopsys Sentaurus TCAD device optimization incorporating narrow-bandgap p++ source pockets to thin the band-to-band tunneling barrier and boost ON-current.
-   - Investigates electrostatic gate control and subthreshold performance for ultra-low-power logic.
-   - *Status: Simulation Completed*
+7. **[PS-02 Mode-Switching Flight Control PID](https://github.com/ALLENJOE-A/Mode_Switching-Flight_control-Pid_Controller-)**
+   - Silicon Dawn VLSI Hackathon Finalist. Cascaded flight PID controller synthesized in Cadence Genus and physically routed in Cadence Innovus closing timing at 50 MHz with zero DRC violations.
 
-8. **[Processing Element Array for CNN Accelerator](https://github.com/ALLENJOE-A/DESIGN-AND-IMPLEMENTATION-OF-EFFICIENT-PROCESSING-ELEMENT-ARRAY-FOR-CNN-ACCELERATOR)**
-   - Scalable 2D systolic processing element (PE) array executing weight-stationary matrix multiplication for edge AI acceleration.
-   - Implements Dadda multiplier trees and hybrid adders for low-power FPGA evaluation.
-   - *Status: RTL Implemented*
-
-9. **[Digital Oscilloscope — STM32](https://github.com/ALLENJOE-A/Digital-Oscilloscope-STM32)**
-   - Dual interleaved ADC hardware with direct memory access (DMA) sampling and real-time waveform rendering on an ILI9341 320x240 TFT display.
-   - *Status: Hardware & Firmware Completed*
+8. **[Digital Oscilloscope — STM32F103C8T6](https://github.com/ALLENJOE-A/Digital-Oscilloscope-STM32)**
+   - Real-time dual interleaved ADC sampling with continuous DMA streaming to an ILI9341 SPI TFT display.
 
 ---
 
-## 📊 Verification & Evidence Framework
+## 🛠️ Architecture & Interactive Features
 
-| Domain | Project | Key Verification Methodology | Implementation Status |
-|:---|:---|:---|:---:|
-| **Mixed-Signal / PLL** | GS-ADPLL | Behavioral simulation & OpenROAD 130nm standard-cell flow | RTL Implemented |
-| **ASIC / Interconnect** | 4-Ch DMA Controller | Self-checking testbench (6,266 checks, 0 errors) | RTL Verified |
-| **DFT / Testing** | Low-Power MAC BIST | Fault simulation & PPA synthesis comparison | Simulation & Synthesis |
-| **EDA AI / Litho** | GNN-T EPE Prediction | 2D Fourier-optics simulation graphs | Research Prototype |
-| **EDA AI / Litho** | CNN Hotspot Detection | ICCAD-12 benchmark evaluation & Grad-CAM attribution | Research Prototype |
-| **Device Modelling** | FE-DGDM-JLTFET | Synopsys Sentaurus TCAD physics & parameter sweeps | Simulation Completed |
-| **Device Modelling** | Vertical TFET | Synopsys Sentaurus TCAD non-local band-to-band tunneling | Simulation Completed |
-| **Embedded Systems** | STM32 Oscilloscope | Hardware bench testing with dual ADC + DMA pipeline | Completed |
-
-*Note: Verification statuses transparently reflect digital RTL simulation, TCAD simulation, and academic prototypes. No silicon tapeouts are claimed without physical foundry manufacturing evidence.*
+- **Continuous 3D Exploded Die**: Built with [Three.js](https://threejs.org), deconstructing a sealed BGA package into a nickel lid (laser-etched with `ALLEN JOE A`), gold wire bonds, and SkyWater 130nm metal stack (met5 down to li1) with semiconductor macros (`GS-ADPLL / DLF`, `16-bit MAC BIST`, `4-Ch DMA Controller`, `burst FIFO buffer`).
+- **Interactive Technical Demonstrations**:
+  - Dynamic DMA burst efficiency visualization (1-word fixed vs. 16-word adaptive).
+  - GS-ADPLL gear-shifting acquisition and tracking dynamics readout (tracking mode vs. auto gear-shift vs. baseline fixed).
+  - Cycle-accurate simulation waveform viewer based on real Verilog VCD trace data.
+  - 8×8 systolic processing element LED wavefront animation.
+- **Smooth Scroller**: Powered by [Lenis](https://github.com/darkroomengineering/lenis).
+- **Vite & TypeScript Integration**: Optimized production bundling with modern ES modules.
 
 ---
 
-## 🛠️ Technology Stack
+## 📜 Credits & Licensing
 
-- **Frontend & Rendering**: React 19, TypeScript, Three.js, `@react-three/fiber`, `@react-three/drei`, GSAP ScrollTrigger, Lucide Icons, Recharts.
-- **Continuous 3D World**: Fixed background WebGL canvas tracking scroll progress `0.00 → 1.00`, smoothly illustrating silica sand → ingot boule → sliced 300mm wafer → FinFET transistor cross-section → packaged SoC.
-- **Design System**: Electric Cyan (`#00D9FF`), Semiconductor Blue (`#268BFF`), Deep Navy (`#0A1E2E`), and GitHub Dark (`#0D1117`).
-- **Build & CI/CD**: Vite 8, GitHub Actions (`deploy-pages`), Vercel SPA routing (`vercel.json`).
-
----
-
-## 🚀 Local Development
-
-```bash
-# Clone the repository
-git clone https://github.com/ALLENJOE-A/semiconductor-portfolio.git
-cd semiconductor-portfolio
-
-# Install dependencies
-npm install
-
-# Run local development server
-npm run dev
-
-# Run production build and typecheck
-npm run build
-
-# Preview production build locally
-npm run preview
-```
-
----
-
-## 📄 License & Attribution
-
-All hardware RTL code, TCAD models, and simulation datasets are authored by **Allen Joe A**.  
-Contact: [GitHub Profile](https://github.com/ALLENJOE-A) · [LinkedIn Profile](https://www.linkedin.com/in/allenjoe-a)
+- **License & Copyright**: Original VLSI designs, RTL architectures, and modifications copyright © 2026 Allen Joe A (MIT License); underlying visual layout scaffolding adapted with attribution from Chinmay Mahananda under GitHub public repository terms (see [`LICENSE`](LICENSE)).
+- **3D Engine**: Three.js (MIT License)
+- **Smooth Scrolling**: Lenis (MIT License)
+- **Typography**: Inter Tight (SIL OFL 1.1) and JetBrains Mono (SIL OFL 1.1)
+- **Historical Portraits**:
+  - Isaac Newton by Godfrey Kneller (1689, Public Domain)
+  - Richard Feynman (1939 MIT yearbook, Public Domain)
+  - Edsger W. Dijkstra by Hamilton Richards (CC BY-SA 3.0, Wikimedia Commons)
+- **EDA & Tool Logos**: Belong to their respective owners (Cadence, Synopsys, SkyWater, OpenROAD, Python, etc.)
