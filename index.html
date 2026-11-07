@@ -213,7 +213,7 @@
       <div class="nt-ring__scene">
         <div class="nt-ring__ring" id="ringEl">
           <a class="rc" href="#dma"><span class="rc__n">01</span><b class="rc__t">4-CH ADAPTIVE DMA</b><span class="rc__d">Dynamic burst sizing & round-robin arbitration</span><span class="rc__s"><em>6,266 / 6,266</em> checks pass</span><span class="rc__go">Take it apart</span></a>
-          <a class="rc" href="#adpll"><span class="rc__n">02</span><b class="rc__t">GS-ADPLL SKY130</b><span class="rc__d">Gain-scheduled PLL, RTL to GDSII on Sky130</span><span class="rc__s"><em>28 cycles</em> lock</span><span class="rc__go">Take it apart</span></a>
+          <a class="rc" href="#adpll"><span class="rc__n">02</span><b class="rc__t">GS-ADPLL GPDK90</b><span class="rc__d">Gain-scheduled PLL, RTL to GDSII on gpdk90</span><span class="rc__s"><em>28 cycles</em> lock</span><span class="rc__go">Take it apart</span></a>
           <a class="rc" href="#systolic"><span class="rc__n">03</span><b class="rc__t">LOW-POWER MAC BIST</b><span class="rc__d">16-bit MAC with BIST, 100 MHz in Genus</span><span class="rc__s"><em>99.90%</em> fault coverage</span><span class="rc__go">Take it apart</span></a>
           <a class="rc" href="#gnn"><span class="rc__n">04</span><b class="rc__t">GNN-T LITHO</b><span class="rc__d">Equivariant GNN + Transformer for EPE prediction</span><span class="rc__s"><em>5</em> heads</span><span class="rc__go">Take it apart</span></a>
         </div>
@@ -268,7 +268,7 @@
   <article class="nt-proj" id="adpll">
     <div class="nt-head">
       <p class="nt-meta"><span>02</span><code>Gear-Shifting-All-Digital-Phase-Locked-Loop</code><span>Verilog, Cadence Genus, Innovus & Voltus</span></p>
-      <h3 class="dots">GS-ADPLL SKY130</h3>
+      <h3 class="dots">GS-ADPLL GPDK90</h3>
       <p class="nt-sum">A dual-mode gain-scheduled All-Digital Phase-Locked Loop (GS-ADPLL) with fast gear-shifting loop filter achieving lock acquisition in 28 reference cycles and 0.8–3.1 ps steady-state cycle-to-cycle jitter (91.9% jitter reduction at optimal K=8 knee), evaluated through complete logic synthesis and layout sign-off.</p>
     </div>
     <dl class="nt-stats">
@@ -302,7 +302,7 @@
         <li><b>Route</b><span>NanoRoute</span></li>
         <li><b>STA</b><span>signoff timing</span></li>
         <li><b>Voltus</b><span>vector power</span></li>
-        <li><b>GDSII</b><span>SkyWater 130nm</span></li>
+        <li><b>GDSII</b><span>Cadence gpdk90</span></li>
       </ol>
     </figure>
     <figure class="demo nt-demo" id="timing">

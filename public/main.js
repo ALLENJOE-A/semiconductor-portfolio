@@ -39,7 +39,7 @@
     dijkstra: { img: 'assets/img/dijkstra.webp', alt: 'Edsger W. Dijkstra', cap: 'E.W. Dijkstra<br>// (1930–2002) · 1970' },
     adpll: { html: term('$ genus -f synth.tcl\n\nGain-Scheduled ADPLL\nCadence Genus / Innovus\n\n<span class="ok">*** LOCK: 28 cycles\nJitter: 0.8-3.1 ps C2C\n91.9% jitter reduction ***</span>'), cap: 'Gain-Scheduled ADPLL<br>// Cadence signoff' },
     feynman: { img: 'assets/img/feynman.webp', alt: 'Richard Feynman, 1939', cap: 'R. Feynman<br>// (1918–1988) · 1974' },
-    gh: { html: term('github.com/\nALLENJOE-A\n\n<span class="hl">■</span> GS-ADPLL (Sky130)\n<span class="hl">■</span> 4-Ch Adaptive DMA\n<span class="hl">■</span> Low-Power MAC BIST\n<span class="hl">■</span> Flight PID (Innovus)\n<span class="hl">■</span> GNN-T EPE Predictor\n<span class="hl">■</span> FE-DGDM Biosensor'), cap: 'GitHub<br>// ALLENJOE-A' },
+    gh: { html: term('github.com/\nALLENJOE-A\n\n<span class="hl">■</span> GS-ADPLL (gpdk90)\n<span class="hl">■</span> 4-Ch Adaptive DMA\n<span class="hl">■</span> Low-Power MAC BIST\n<span class="hl">■</span> Flight PID (Innovus)\n<span class="hl">■</span> GNN-T EPE Predictor\n<span class="hl">■</span> FE-DGDM Biosensor'), cap: 'GitHub<br>// ALLENJOE-A' },
     tcad: { html: term('Sentaurus TCAD\nDevice Modeling\n\nFE-DGDM-JLTFET\n<span class="hl">Ion: 0.804 mA</span>\n<span class="hl">Ion/Ioff: 7.24×10⁸</span>\nSens: 18.14%\nBio-cavity k=1..22'), cap: 'Sentaurus TCAD<br>// Quantum Device Physics' },
     newton: { img: 'assets/img/newton.webp', alt: 'Isaac Newton by Godfrey Kneller, 1689', cap: 'I. Newton<br>// (1643–1727) · 1676' },
     me: { img: 'assets/img/allen-card.webp', alt: 'Allen Joe A', cap: 'Allen Joe A<br>// (2026)' }

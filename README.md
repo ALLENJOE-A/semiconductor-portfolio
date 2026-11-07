@@ -21,7 +21,7 @@ Focused on ASIC Physical Design, RTL Microarchitecture, Built-In Self-Test (DFT)
 
 2. **[Gain-Scheduled All-Digital PLL (GS-ADPLL) & RTL-to-GDS Flow](https://github.com/ALLENJOE-A/Gear-Shifting-All-Digital-Phase-Locked-Loop)**
    - Dual-mode gain-scheduled Digital Loop Filter (DLF) combining rapid acquisition (28 reference cycles) with narrow-bandwidth tracking (0.8–3.1 ps C2C jitter; 91.9% jitter reduction at optimal K=8 knee; 87.5% loop filter activity reduction).
-   - Full synthesizable Verilog RTL hierarchy (`adpll_top`, `pfd`, `dlf_top`, `gear_ctrl`, `prop_path`, `integ_path`, `lock_det`, `dco_core`, `div_n`) evaluated through Cadence Genus, Innovus, and Voltus vector power analysis.
+   - Full synthesizable Verilog RTL hierarchy (`adpll_top`, `pfd`, `dlf_top`, `gear_ctrl`, `prop_path`, `integ_path`, `lock_det`, `dco_core`, `div_n`) evaluated through Cadence Genus, Innovus (Cadence gpdk90 PDK), and Voltus vector power analysis.
 
 3. **[Low-Power 16-Bit MAC BIST Architecture](https://github.com/ALLENJOE-A/Low-Power-MAC-BIST-PPA-Fault-Coverage)**
    - Synthesizable 16-bit Multiply-Accumulate (MAC) datapath evaluated alongside low-transition Built-In Self-Test (BIST) architectures.
