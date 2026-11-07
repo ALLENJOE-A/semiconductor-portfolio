@@ -1,465 +1,533 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#060B14" />
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Allen Joe A | Semiconductor & VLSI Engineering</title>
+<meta name="description" content="Allen Joe A, B.Tech in Electronics & VLSI Engineering at School of Electronics Engineering (SENSE), VIT Chennai. ASIC Physical Design, RTL Architecture, BIST & DFT, TCAD Device Physics, and AI for EDA.">
+<meta name="theme-color" content="#000000">
+<link rel="canonical" href="https://allenjoe-a.github.io/semiconductor-portfolio/">
+<meta property="og:title" content="Allen Joe A | Semiconductor & VLSI Engineering">
+<meta property="og:description" content="From quantum device physics and TCAD simulation to RTL microarchitecture, low-power BIST, and tapeout-ready physical design.">
+<meta property="og:url" content="https://allenjoe-a.github.io/semiconductor-portfolio/">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://allenjoe-a.github.io/semiconductor-portfolio/assets/og.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Allen Joe A: Semiconductor & VLSI Engineering Portfolio. A dark chip package with 3D metal stack.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='7' fill='%23000'/><rect x='8' y='8' width='16' height='16' rx='2' fill='none' stroke='%2300D9FF' stroke-width='2'/><rect x='13' y='13' width='6' height='6' fill='%23268BFF'/></svg>">
 
-    <!-- Primary SEO Metadata -->
-    <title>Allen Joe A — From Device Physics to GDSII | Semiconductor &amp; VLSI Portfolio</title>
-    <meta name="description" content="Cinematic 3D WebGL portfolio of Allen Joe A — Electronics and VLSI engineer specializing in TCAD device physics, sub-60mV tunnel FETs, RTL design, low-power BIST, and Cadence Innovus physical design." />
-    <meta name="keywords" content="Allen Joe A, VLSI, ASIC, Physical Design, RTL, Cadence Genus, Cadence Innovus, Sentaurus TCAD, Tunnel FET, BIST, SkyWater 130nm, GDSII" />
-    <link rel="canonical" href="https://allenjoe-a.github.io/semiconductor-portfolio/" />
+<script>(function(){var c=matchMedia('(pointer: coarse)').matches,s=Math.min(screen.width,screen.height);if(c&&s<600)document.documentElement.classList.add('phone');})();</script>
+<link rel="preload" href="assets/fonts/InterTight-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="preload" href="assets/fonts/JetBrainsMono-400.woff2" as="font" type="font/woff2" crossorigin>
+<link rel="stylesheet" href="nothing.css">
+<link rel="stylesheet" href="ideas-lite.css">
+<link rel="stylesheet" href="styles.css">
+<link rel="stylesheet" href="v5-projects.css">
+<link rel="stylesheet" href="v5-hero.css">
+<link rel="stylesheet" href="honey.css">
+<link rel="stylesheet" href="honey-grey.css">
+<link rel="stylesheet" href="honey-mobile.css">
+</head>
+<body>
+<a class="skip" href="#about">Skip to content</a>
 
-    <!-- Open Graph / Social Cards -->
-    <meta property="og:type" content="website" />
-    <meta property="og:url" content="https://allenjoe-a.github.io/semiconductor-portfolio/" />
-    <meta property="og:title" content="Allen Joe A — From Device Physics to GDSII" />
-    <meta property="og:description" content="A cinematic scroll-driven 3D WebGL descent into a silicon chip: TCAD device modeling, digital RTL, low-power BIST, and RTL-to-GDS physical design." />
-    <meta property="og:image" content="./assets/real/pid_final_layout.webp" />
+<header class="bar">
+  <a class="bar__name" href="#top">allen joe a<span>—</span>©2026</a>
+  <a class="bar__mail" href="mailto:allenjoe.a2024@vitstudent.ac.in">allenjoe.a2024@vitstudent.ac.in</a>
+  <nav class="bar__nav" aria-label="Links">
+    <a href="assets/Allen_Joe_A_Resume.pdf" download>Resume</a>
+    <a href="https://www.linkedin.com/in/allen-joe-a-36069831b/" target="_blank" rel="noopener">LinkedIn</a>
+    <a href="https://github.com/ALLENJOE-A" target="_blank" rel="noopener">GitHub</a>
+  </nav>
+  <button class="bar__motion motion" id="motion" type="button" aria-pressed="true">Motion on</button>
+  <a class="bar__cta" href="#contact">Get in touch</a>
+  <div class="wavebar" aria-hidden="true"><svg id="wave" preserveAspectRatio="none"></svg><i id="wavecursor"></i></div>
+</header>
 
-    <!-- Twitter Card -->
-    <meta name="twitter:card" content="summary_large_image" />
-    <meta name="twitter:title" content="Allen Joe A — Semiconductor &amp; VLSI Engineering Portfolio" />
-    <meta name="twitter:description" content="Cinematic 3D WebGL journey from quantum device physics to tapeout-ready GDSII." />
-    <meta name="twitter:image" content="./assets/real/pid_final_layout.webp" />
+<main id="top">
 
-    <link rel="icon" type="image/svg+xml" href="./favicon.svg" />
-
-    <!-- Fonts: Space Grotesk, Inter, JetBrains Mono -->
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=JetBrains+Mono:wght@400;500;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet" />
-
-    <!-- JSON-LD Structured Data -->
-    <script type="application/ld+json">
-      {
-        "@context": "https://schema.org",
-        "@type": "Person",
-        "name": "Allen Joe A",
-        "jobTitle": "Electronics & VLSI Semiconductor Engineer",
-        "alumniOf": {
-          "@type": "EducationalOrganization",
-          "name": "Vellore Institute of Technology, Chennai"
-        },
-        "url": "https://allenjoe-a.github.io/semiconductor-portfolio/",
-        "sameAs": [
-          "https://github.com/ALLENJOE-A",
-          "https://www.linkedin.com/in/allen-joe-a-36069831b/"
-        ],
-        "knowsAbout": [
-          "TCAD Device Simulation",
-          "Digital RTL Design",
-          "ASIC Physical Design",
-          "Built-In Self-Test (BIST)",
-          "Cadence Genus & Innovus",
-          "Synopsys Sentaurus",
-          "Verilog and SystemVerilog"
-        ]
-      }
-    </script>
-
-    <link rel="stylesheet" href="./src/styles/cinematic.css" />
-  </head>
-  <body>
-    <!-- Accessibility Skip Link -->
-    <a href="#main-content" class="skip-link">Skip to main content</a>
-
-    <!-- Fixed WebGL Stage -->
-    <canvas id="webgl-canvas" aria-hidden="true"></canvas>
-    <div class="crt-overlay" aria-hidden="true"></div>
-
-    <!-- WebGL Preloader -->
-    <div id="preloader" class="preloader-screen" role="status" aria-live="polite">
-      <div class="preloader-wafer-graphic">
-        <div class="wafer-spinner"></div>
-        <div class="preloader-die-icon"></div>
+<!-- 01 HERO: the chip package comes apart as you scroll (three.js), three text beats on top -->
+<section class="hero" aria-label="Introduction">
+  <div class="hero__stage">
+    <img class="hero__fallback" src="assets/img/hero.webp" alt="" width="1536" height="864">
+    <canvas id="die" aria-hidden="true"></canvas>
+    <div class="hero__labels" id="labels" aria-hidden="true"></div>
+    <div class="hero__text">
+      <div class="beat beat--1">
+        <h1 class="hx"><span>Every bit, accounted for.</span><span class="hx__dim">From quantum physics to tapeout sign-off.</span></h1>
       </div>
-      <div class="preloader-title">INITIALIZING SILICON SUBSTRATE</div>
-      <div id="preloader-msg" class="preloader-status">Fabricating 300mm wafer lattice...</div>
+      <div class="beat beat--2" aria-hidden="true">
+        <p class="big">Golden models first. Then hardware that agrees with them, bit for bit.</p>
+      </div>
+      <div class="beat beat--3" aria-hidden="true">
+        <p class="big">Every number below comes from a repo you can open, synthesize, and run.</p>
+      </div>
+    </div>
+    <p class="hero__hint" id="hint">Scroll to take the chip apart</p>
+  </div>
+</section>
+
+<!-- TOOLS: logo marquee -->
+<section class="tools" aria-label="Tools I use">
+  <p class="tools__label">Tools of the trade</p>
+  <div class="tools__row">
+    <ul class="tools__track">
+      <li><img src="assets/logos/python.svg" alt="Python" loading="lazy"></li>
+      <li class="wm">Verilog</li>
+      <li><img src="assets/logos/yosys.png" alt="Yosys" loading="lazy"></li>
+      <li class="wm">SystemVerilog</li>
+      <li><img src="assets/logos/skywater.svg" alt="SkyWater SKY130" loading="lazy"></li>
+      <li class="wm">OpenROAD</li>
+      <li><img src="assets/logos/githubactions.svg" alt="GitHub Actions" loading="lazy"></li>
+      <li class="wm">Cadence Genus</li>
+      <li class="wm">Cadence Innovus</li>
+      <li class="wm">Sentaurus TCAD</li>
+      <li><img src="assets/logos/c.svg" alt="C" loading="lazy"></li>
+      <li class="wm">Icarus Verilog</li>
+      <li><img src="assets/logos/pytorch.svg" alt="PyTorch" loading="lazy"></li>
+      <li class="wm">ModelSim</li>
+      <li><img src="assets/logos/git.svg" alt="Git" loading="lazy"></li>
+    </ul>
+    <ul class="tools__track" aria-hidden="true">
+      <li><img src="assets/logos/python.svg" alt="Python" loading="lazy"></li>
+      <li class="wm">Verilog</li>
+      <li><img src="assets/logos/yosys.png" alt="Yosys" loading="lazy"></li>
+      <li class="wm">SystemVerilog</li>
+      <li><img src="assets/logos/skywater.svg" alt="SkyWater SKY130" loading="lazy"></li>
+      <li class="wm">OpenROAD</li>
+      <li><img src="assets/logos/githubactions.svg" alt="GitHub Actions" loading="lazy"></li>
+      <li class="wm">Cadence Genus</li>
+      <li class="wm">Cadence Innovus</li>
+      <li class="wm">Sentaurus TCAD</li>
+      <li><img src="assets/logos/c.svg" alt="C" loading="lazy"></li>
+      <li class="wm">Icarus Verilog</li>
+      <li><img src="assets/logos/pytorch.svg" alt="PyTorch" loading="lazy"></li>
+      <li class="wm">ModelSim</li>
+      <li><img src="assets/logos/git.svg" alt="Git" loading="lazy"></li>
+    </ul>
+  </div>
+</section>
+
+<!-- 01 ABOUT -->
+<section class="hy about2" id="about">
+  <div class="hy__head"><span class="chap__no">[ 01 / 09 ]</span><span>About</span></div>
+  <div class="about2__grid">
+    <div>
+      <p class="lit" data-lit>I'm Allen Joe A, a semiconductor and VLSI engineer focusing on ASIC physical design, synthesizable RTL microarchitecture, BIST/DFT architectures, and quantum TCAD device physics. Every design starts with rigorous modeling, and every number on this page is backed by open-source code and simulated evidence.</p>
+      <a class="btn" href="assets/Allen_Joe_A_Resume.pdf" download>Read my resume</a>
+    </div>
+    <figure class="about2__photo"><img src="assets/img/allen.webp" alt="Allen Joe A - Semiconductor and VLSI Engineer" width="1024" height="861" loading="lazy"></figure>
+  </div>
+  <div class="path">
+    <p class="path__title">Academic & Engineering Journey</p>
+    <ol class="path__line">
+      <li><span class="path__y">2024 – 2028</span><b>Bachelor of Technology (B.Tech) in Electronics & VLSI Engineering</b><span>School of Electronics Engineering (SENSE), Vellore Institute of Technology (VIT), Chennai. Focus: ASIC Physical Design, RTL Microarchitecture, and Semiconductor Physics.</span></li>
+      <li><span class="path__y">2024 – Present</span><b>Research Intern, TCAD Device Modeling & Biosensing</b><span>School of Electronics Engineering (SENSE), VIT Chennai. Synopsys Sentaurus TCAD modeling and sensitivity analysis of FE-DGDM-JLTFET for label-free biomolecule detection under faculty guidance of Dr. Lakshmi B.</span></li>
+      <li><span class="path__y">2024 – 2026</span><b>Silicon Dawn VLSI Hackathon Finalist (PS-02)</b><span>Sudarshana Semiconductors & VIT Chennai. Cadence Genus synthesis & Cadence Innovus physical design of Mode-Switching Flight Control PID closing timing at 50 MHz with zero DRC violations.</span></li>
+      <li><span class="path__y">Active Focus</span><b>Digital RTL, Open-Source ASIC Flows & AI for EDA</b><span>OpenROAD/SkyWater 130nm standard-cell flows, DFT low-power BIST architectures, and Equivariant GNNs for computational lithography.</span></li>
+      <li class="is-next"><span class="path__y">2028</span><b>Next: ASIC Physical Design, RTL Design, or Hardware Role</b><span>Graduating 2028.</span></li>
+    </ol>
+  </div>
+</section>
+
+<!-- 02 WHAT I DO -->
+<section class="hy services" id="services">
+  <div class="hy__head"><span class="chap__no">[ 02 / 09 ]</span><span>What I do</span></div>
+  <div class="services__grid">
+    <div class="services__intro">
+      <h2 class="h2">I design, verify and implement semiconductor hardware.</h2>
+      <p>From nanometer device physics and Sentaurus TCAD simulations to synthesizable Verilog/SystemVerilog, low-power BIST testing, and complete RTL-to-GDSII physical implementation with clean STA sign-off.</p>
+      <a class="btn" href="#work">See the work</a>
+      <img class="services__obj float" src="assets/img/chrome-gate.webp" alt="" width="720" height="720" loading="lazy">
+    </div>
+    <ul class="services__words" id="words">
+      <li>RTL microarchitecture</li><li>ASIC physical design</li><li>OpenROAD / Sky130</li><li>Cadence Genus / Innovus</li><li>TCAD device physics</li><li>DFT & BIST testing</li><li>STA timing sign-off</li><li>AI for EDA</li>
+    </ul>
+  </div>
+</section>
+
+<!-- 03 HOW I WORK -->
+<section class="hy work3" id="method">
+  <div class="hy__head"><span class="chap__no">[ 03 / 09 ]</span><span>How I work</span></div>
+  <div class="work3__title"><h2 class="h1x">It's not guesswork.</h2><p class="mono-note">(My method is as simple as 1… 2… 3…)</p></div>
+  <div class="stack">
+    <article class="stack__card"><span class="stack__n">01</span><img class="float" src="assets/img/chrome-scroll.webp" alt="" width="720" height="720" loading="lazy"><div><h3>One spec</h3><p>Every design starts from mathematical specification and architectural constraints. In the 4-Channel DMA controller, every arbitration priority and burst boundary (1/4/8/16-word) is formalized before RTL implementation.</p></div></article>
+    <article class="stack__card"><span class="stack__n">02</span><img class="float" src="assets/img/chrome-gears.webp" alt="" width="720" height="720" loading="lazy"><div><h3>Two models</h3><p>Independent software golden references and synthesizable hardware. In the Gain-Scheduled ADPLL and 2D PE Array, RTL outputs are bit-exact verified against cycle-accurate Python and behavioral models.</p></div></article>
+    <article class="stack__card"><span class="stack__n">03</span><img class="float" src="assets/img/chrome-check.webp" alt="" width="720" height="720" loading="lazy"><div><h3>Three checks</h3><p>Directed corner-case tests, constrained-random verification, and physical sign-off. Testbenches check thousands of automated vectors (6,266 checks on DMA with 0 errors) before synthesis and P&R.</p></div></article>
+  </div>
+</section>
+
+<!-- 04 SPEC MEETS SILICON -->
+<section class="hy meet" id="meet">
+  <div class="hy__head"><span class="chap__no">[ 04 / 09 ]</span><span>Verification</span></div>
+  <div class="meet__swap" id="swap">
+    <h2 class="meet__row" id="row1">Spec, meet silicon.</h2>
+    <h2 class="meet__row meet__row--dim" id="row2" aria-hidden="true">Silicon, meet spec.</h2>
+  </div>
+  <div class="meet__grid">
+    <img class="meet__obj float" src="assets/img/chrome-hand.webp" alt="" width="720" height="720" loading="lazy">
+    <div class="meet__text">
+      <p>A specification says what hardware should do. RTL says what it actually does. Verification is where the two are introduced, and where every disagreement is found while it is still cheap to fix.</p>
+      <p>That is the work I do: design synthesizable microarchitectures, verify them against golden references, and take them through tapeout-ready physical design flows.</p>
+      <a class="btn" href="#contact">Talk to me</a>
+    </div>
+  </div>
+</section>
+
+<!-- 05 BEFORE / AFTER -->
+<section class="ba2" id="before-after" aria-label="Before and after verification">
+  <div class="ba2__stage">
+    <canvas class="ba2__warp" id="warp" aria-hidden="true"></canvas>
+    <span class="chap__no ba2__no">[ 05 / 09 ]</span>
+    <h2 class="ba2__word ba2__word--before">Before<br>// verification</h2>
+    <h2 class="ba2__word ba2__word--after">After<br>// verification</h2>
+    <div class="ba2__cards ba2__cards--before">
+      <article class="tc" style="--r:-4deg"><header><h4>Silent mismatch.</h4><span>[01]</span></header><p>Outputs look plausible, nobody compares them bit for bit, and the bug ships.</p></article>
+      <article class="tc" style="--r:3deg"><header><h4>Waveform guesswork.</h4><span>[02]</span></header><p>Hours of scrolling traces with no reference for what the value should have been.</p></article>
+      <article class="tc" style="--r:-2deg"><header><h4>It passed once.</h4><span>[03]</span></header><p>A test that ran green on one seed, one day, on one machine.</p></article>
+    </div>
+    <div class="ba2__cards ba2__cards--after">
+      <article class="tc tc--hot" style="--r:3deg"><header><h4>Bit-exact.</h4><span>[01]</span></header><p>Every output compared against a golden model, bit for bit, never by eye.</p></article>
+      <article class="tc tc--hot" style="--r:-3deg"><header><h4>Self-checking.</h4><span>[02]</span></header><p>Testbenches fail loudly on a mismatch, and on a coverage hole too.</p></article>
+      <article class="tc tc--hot" style="--r:2deg"><header><h4>On every push.</h4><span>[03]</span></header><p>Automated regression reruns every check on every commit, so green stays green.</p></article>
+    </div>
+  </div>
+</section>
+
+<!-- 06 PROJECTS -->
+<section class="chap work nt nt-work" id="work">
+  <div class="chap__head"><span class="chap__no">[ 06 / 09 ]</span><span class="chap__name">How I build</span></div>
+  <h2 class="bighead">Four repos, taken apart.</h2>
+  <p class="sub">Each project broken into the files and modules that do the work. Diagrams draw as you scroll.</p>
+
+  <!-- 3D project index: a ring of four cards that turns as you scroll -->
+  <div class="nt-ring" id="ring" aria-label="Project index">
+    <div class="nt-ring__stage">
+      <div class="nt-ring__hud">
+        <p class="nt-tag"><span class="dotred"></span>Index</p>
+        <p class="nt-ring__count" aria-hidden="true"><b id="ringNum">01</b><i>/ 04</i></p>
+        <ol class="nt-ring__pips" aria-hidden="true"><li></li><li></li><li></li><li></li></ol>
+      </div>
+      <div class="nt-ring__scene">
+        <div class="nt-ring__ring" id="ringEl">
+          <a class="rc" href="#dma"><span class="rc__n">01</span><b class="rc__t">4-CH ADAPTIVE DMA</b><span class="rc__d">Dynamic burst sizing & round-robin arbitration</span><span class="rc__s"><em>6,266 / 6,266</em> checks pass</span><span class="rc__go">Take it apart</span></a>
+          <a class="rc" href="#adpll"><span class="rc__n">02</span><b class="rc__t">GS-ADPLL SKY130</b><span class="rc__d">Gain-scheduled PLL, RTL to GDSII on Sky130</span><span class="rc__s"><em>28 cycles</em> lock</span><span class="rc__go">Take it apart</span></a>
+          <a class="rc" href="#systolic"><span class="rc__n">03</span><b class="rc__t">LOW-POWER MAC BIST</b><span class="rc__d">16-bit MAC with BIST, 100 MHz in Genus</span><span class="rc__s"><em>99.90%</em> fault coverage</span><span class="rc__go">Take it apart</span></a>
+          <a class="rc" href="#gnn"><span class="rc__n">04</span><b class="rc__t">GNN-T LITHO</b><span class="rc__d">Equivariant GNN + Transformer for EPE prediction</span><span class="rc__s"><em>5</em> heads</span><span class="rc__go">Take it apart</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- signal trace in the left margin -->
+  <div class="trace" id="trace" aria-hidden="true"><i class="trace__fill" id="traceFill"></i><i class="trace__pkt" id="tracePkt"></i></div>
+
+  <!-- ================= 01 4-CHANNEL DMA ================= -->
+  <article class="nt-proj" id="dma">
+    <div class="nt-head">
+      <p class="nt-meta"><span>01</span><code>4-Channel-Adaptive-Burst-DMA-Controller-with-Hardware-Performance-Monitoring</code><span>Verilog RTL</span></p>
+      <h3 class="dots">4-CH ADAPTIVE DMA</h3>
+      <p class="nt-sum">A 4-channel Direct Memory Access controller featuring dynamic burst sizing (1, 4, 8, 16-word INCR bursts), starvation-free round-robin arbitration, and non-intrusive 64-bit performance monitoring.</p>
+    </div>
+    <dl class="nt-stats">
+      <div><dt>Verification checks</dt><dd><b data-count="6266" data-sep>6,266</b><i>/ 6,266</i></dd></div>
+      <div><dt>Cycle reduction</dt><dd><b data-count="5">5.61</b><i>%</i></dd></div>
+      <div><dt>Burst overhead reduction</dt><dd><b data-count="50">50</b><i>%</i></dd></div>
+    </dl>
+    <figure class="nt-fig" data-diagram="dma">
+      <figcaption><span class="dotred"></span>DMA multi-channel arbitration and burst packaging datapath</figcaption>
+      <div class="nt-scroll"><svg viewBox="0 0 1200 520" class="dg" role="img" aria-label="DMA controller block diagram: 4 channel requests into round-robin arbiter and burst engine, performance counters, AMBA master interface and self-checking testbench"></svg></div>
+    </figure>
+    <ul class="nt-cards">
+      <li><code>dma_top.v</code><p>Top-level controller integrating request decoding, channel state machines, priority scheduler, and AMBA peripheral interface.</p></li>
+      <li><code>arbiter.v</code><p>Starvation-free round-robin arbiter dynamically granting bus ownership across active request lines without deadlocks.</p></li>
+      <li><code>burst_engine.v</code><p>Adaptive burst packager generating 1, 4, 8, or 16-word INCR transfers based on FIFO occupancy and memory boundary alignment.</p></li>
+      <li><code>tb_dma_controller.v</code><p>Self-checking verification suite executing 6,266 automated checks with zero errors, validating backpressure and boundary splits.</p></li>
+    </ul>
+    <div class="nt-gaps">
+      <div><b>Channel A</b><p>Round-robin fairness: prevents high-priority starvation on sustained traffic.</p></div>
+      <div><b>Channel B</b><p>Dynamic burst packaging: cuts memory bus transaction overhead by 50% on 512-word transfers.</p></div>
+      <div class="hot"><b>Monitoring</b><p>Non-intrusive 64-bit hardware counters logging bus utilization and latency in real time.</p></div>
+    </div>
+    <figure class="demo nt-demo" id="gapc">
+      <figcaption><strong>Compare burst overhead.</strong> Fixed 1-word single transfers vs. 16-word adaptive burst transfer across 16 data units:</figcaption>
+      <div class="seg" role="radiogroup" aria-label="Burst transfer mode">
+        <button role="radio" aria-checked="false" data-mode="fixed">1-WORD FIXED</button>
+        <button role="radio" aria-checked="true" data-mode="adaptive">ADAPTIVE (16-WORD)</button>
+      </div>
+      <div class="block" id="block" aria-hidden="true"></div>
+      <p class="readout" aria-live="polite"><span id="gz">1 burst handshake</span>, efficiency <span id="ge">5.61% cycle gain</span></p>
+      <p class="note">Visual block represents bus handshake slots vs. data stream transfers.</p>
+    </figure>
+    <a class="pill" href="https://github.com/ALLENJOE-A/4-Channel-Adaptive-Burst-DMA-Controller-with-Hardware-Performance-Monitoring" target="_blank" rel="noopener">Open 4-Ch DMA Controller on GitHub</a>
+  </article>
+
+  <!-- ================= 02 GAIN-SCHEDULED ADPLL & ASIC FLOW ================= -->
+  <article class="nt-proj" id="adpll">
+    <div class="nt-head">
+      <p class="nt-meta"><span>02</span><code>Gear-Shifting-All-Digital-Phase-Locked-Loop</code><span>Verilog, Cadence Genus, Innovus & Voltus</span></p>
+      <h3 class="dots">GS-ADPLL SKY130</h3>
+      <p class="nt-sum">A dual-mode gain-scheduled All-Digital Phase-Locked Loop (GS-ADPLL) with fast gear-shifting loop filter achieving lock acquisition in 28 reference cycles and 0.8–3.1 ps steady-state cycle-to-cycle jitter (91.9% jitter reduction at optimal K=8 knee), evaluated through complete logic synthesis and layout sign-off.</p>
+    </div>
+    <dl class="nt-stats">
+      <div><dt>Fast acquisition lock</dt><dd><b data-count="28">28</b><i>cycles</i></dd></div>
+      <div><dt>Cycle-to-cycle jitter</dt><dd><b>0.8–3.1</b><i>ps</i></dd></div>
+      <div><dt>Jitter reduction (K=8)</dt><dd><b>91.9</b><i>%</i></dd></div>
+    </dl>
+    <figure class="nt-fig" data-diagram="adpll">
+      <figcaption><span class="dotred"></span>GS-ADPLL microarchitecture and loop filter state transition</figcaption>
+      <div class="nt-scroll"><svg viewBox="0 0 1200 500" class="dg" role="img" aria-label="ADPLL pipeline: Phase detector, dual-mode gain-scheduled loop filter, DCO control word generator, feedback divider and signoff STA"></svg></div>
+    </figure>
+    <ul class="nt-cards">
+      <li><code>adpll_top.v</code><p>Top-level synthesizable RTL integrating PFD, loop filter, DCO core, and feedback divider.</p></li>
+      <li><code>pfd.v</code><p>Phase-Frequency Detector comparing reference and feedback clocks with zero dead-zone.</p></li>
+      <li><code>dlf_top.v</code><p>Digital loop filter integrating proportional path, integral accumulator, and lock detector.</p></li>
+      <li><code>gear_ctrl.v</code><p>Dynamic gear-shifting FSM switching between Gear 1 (wideband acquisition) and Gear 2 (narrowband tracking).</p></li>
+      <li><code>prop_path.v</code><p>Proportional path phase error nudging logic with threshold comparison.</p></li>
+      <li><code>integ_path.v</code><p>Integral path frequency accumulator generating the 129-bit DCO tuning control word.</p></li>
+      <li><code>lock_det.v</code><p>Phase and frequency lock confirmation detector asserting lock state after 28 cycles.</p></li>
+      <li><code>dco_core.v</code><p>Digitally controlled oscillator core generating the output synthesized clock.</p></li>
+      <li><code>div_n.v</code><p>Programmable multi-modulus feedback frequency divider closing the loop to PFD.</p></li>
+    </ul>
+    <figure class="nt-fig">
+      <figcaption><span class="dotred"></span>RTL to GDSII ASIC implementation flow</figcaption>
+      <ol class="flow" data-flow>
+        <li><b>RTL</b><span>adpll/*.v</span></li>
+        <li><b>Genus</b><span>synthesis</span></li>
+        <li><b>Floorplan</b><span>Innovus</span></li>
+        <li><b>Place</b><span>Innovus</span></li>
+        <li><b>CTS</b><span>clock tree</span></li>
+        <li><b>Route</b><span>NanoRoute</span></li>
+        <li><b>STA</b><span>signoff timing</span></li>
+        <li><b>Voltus</b><span>vector power</span></li>
+        <li><b>GDSII</b><span>SkyWater 130nm</span></li>
+      </ol>
+    </figure>
+    <figure class="demo nt-demo" id="timing">
+      <figcaption><strong>Gain-scheduled loop filter dynamics.</strong> Dual-mode DLF gear-shifting acquisition vs. low-jitter tracking modes:</figcaption>
+      <div class="seg" role="radiogroup" aria-label="DLF loop filter mode">
+        <button role="radio" aria-checked="false" data-f="track">TRACKING (GEAR 2)</button>
+        <button role="radio" aria-checked="true" data-f="auto">GEAR-SHIFTING (AUTO)</button>
+        <button role="radio" aria-checked="false" data-f="fixed">BASELINE (GEAR 1)</button>
+      </div>
+      <div class="pipe" aria-hidden="true">
+        <span>PFD</span><span>DLF</span><span>DCO</span><span>DIV</span>
+        <i class="tok"></i><i class="tok"></i><i class="tok"></i>
+      </div>
+      <p class="readout" aria-live="polite" id="tread">Auto Gear-Shifting: Fast 28-cycle acquisition in Gear 1, switching seamlessly upon lock to Gear 2 tracking (0.8–3.1 ps C2C jitter) with zero frequency overshoot.</p>
+    </figure>
+    <a class="pill" href="https://github.com/ALLENJOE-A/Gear-Shifting-All-Digital-Phase-Locked-Loop" target="_blank" rel="noopener">Open GS-ADPLL on GitHub</a>
+  </article>
+
+  <!-- ================= 03 16-BIT LOW-POWER MAC BIST ================= -->
+  <article class="nt-proj" id="systolic">
+    <div class="nt-head">
+      <p class="nt-meta"><span>03</span><code>Low-Power-MAC-BIST-PPA-Fault-Coverage</code><span>Verilog, Cadence Genus & Incisive</span></p>
+      <h3 class="dots">LOW-POWER MAC BIST</h3>
+      <p class="nt-sum">A synthesizable 16-bit Multiply-Accumulate (MAC) architecture with low-transition Built-In Self-Test (BIST), achieving 99.8980% stuck-at fault coverage across 1,960 faults with closed 100 MHz timing in Cadence Genus 21.1.</p>
+    </div>
+    <dl class="nt-stats">
+      <div><dt>Fault coverage</dt><dd><b>99.8980</b><i>%</i></dd></div>
+      <div><dt>Stuck-at faults evaluated</dt><dd><b data-count="1960" data-sep>1,960</b><i>faults</i></dd></div>
+      <div><dt>Target clock frequency</dt><dd><b data-count="100">100</b><i>MHz</i></dd></div>
+    </dl>
+    <div class="nt-pair">
+      <figure class="nt-fig" data-diagram="pe">
+        <figcaption><span class="dotred"></span>16-bit MAC Processing Element datapath</figcaption>
+        <svg viewBox="0 0 560 420" class="dg" role="img" aria-label="Processing element: a_in and b_in multiply, add into a 32-bit accumulator; a passes right and b passes down one cycle later; c_out is the accumulator"></svg>
+      </figure>
+      <figure class="nt-fig">
+        <figcaption><span class="dotred"></span>8 × 8 systolic test array: PE(i,j) fires at cycle i+j</figcaption>
+        <canvas class="led" id="led" aria-label="Animated LED grid of 64 processing elements lighting in a diagonal wavefront" role="img"></canvas>
+      </figure>
+    </div>
+    <figure class="nt-fig wavefig" id="realwave">
+      <figcaption><span class="dotred"></span>Simulation waveform: <code>tb_systolic.v</code>, 4 × 4 PE array multiplication</figcaption>
+      <div class="wf"><svg class="wf__svg" role="img" aria-label="Waveform from the testbench: clock, clear, enable, and PE(0,0) a_in, b_in and accumulator, plus PE(0,1) a_in."></svg></div>
+      <div class="wf__ctl"><input type="range" min="0" max="1000" step="1" value="420" aria-label="Simulation time"><output class="wf__t"></output></div>
+      <p class="wf__note">Cycle-accurate simulation waveform; all tests pass bit-exact. Drag to read values: <code>acc</code> computes <code>a_in × b_in</code> on each clock, and <code>a_in</code> reaches PE(0,1) one clock later.</p>
+    </figure>
+    <figure class="nt-fig" data-diagram="cnn">
+      <figcaption><span class="dotred"></span>Pipelined MAC accelerator: Conv and Dense stages</figcaption>
+      <div class="nt-scroll"><svg viewBox="0 0 1200 380" class="dg" role="img" aria-label="CNN accelerator pipeline: Input image into Conv1, requant bridge, Conv2, FC layers and logits via MAC array"></svg></div>
+    </figure>
+    <figure class="nt-fig">
+      <figcaption><span class="dotred"></span>Design and DFT verification flow</figcaption>
+      <ol class="flow" data-flow>
+        <li><b>Verilog RTL</b><span>16-bit MAC datapath</span></li>
+        <li><b>BIST Insertion</b><span>Low-transition LFSR & MISR</span></li>
+        <li><b>Cadence Genus</b><span>100 MHz constraint synthesis</span></li>
+        <li><b>Fault Injection</b><span>1,960 stuck-at faults</span></li>
+        <li><b>Incisive Sim</b><span>99.8980% fault coverage</span></li>
+        <li><b>Sign-off</b><span>Zero timing violations</span></li>
+      </ol>
+    </figure>
+    <figure class="demo nt-demo" id="bug">
+      <figcaption><strong>The latency alignment bug that waveforms caught.</strong> ROM reads and address registers required MAC enable to lag the input stream by two cycles. With one delay stage, 124 of 144 Conv1 outputs mismatched the golden model.</figcaption>
+      <div class="seg" role="radiogroup" aria-label="Enable delay">
+        <button role="radio" aria-checked="true" data-d="1">1 delay stage</button>
+        <button role="radio" aria-checked="false" data-d="2">2 delay stages</button>
+      </div>
+      <div class="nt-scroll"><svg class="wv" id="wv" viewBox="0 0 640 150" role="img" aria-labelledby="wvt"><title id="wvt">Waveform of clock, ROM data valid and MAC enable</title></svg></div>
+      <p class="readout" aria-live="polite" id="bread">124 of 144 outputs mismatched</p>
+    </figure>
+    <a class="pill" href="https://github.com/ALLENJOE-A/Low-Power-MAC-BIST-PPA-Fault-Coverage" target="_blank" rel="noopener">Open Low-Power MAC BIST on GitHub</a>
+  </article>
+
+  <!-- ================= 04 GNN-T COMPUTATIONAL LITHOGRAPHY ================= -->
+  <article class="nt-proj nt-proj--small" id="gnn">
+    <div class="nt-head">
+      <p class="nt-meta"><span>04</span><code>GNN-T_Edge-Error-Prediction-for-Computational-Lithography</code><span>PyTorch, PyG, Computational Litho</span></p>
+      <h3 class="dots">GNN-T LITHO</h3>
+      <p class="nt-sum">E(n)-Equivariant Graph Neural Network (EGNN) paired with a graph transformer to predict Edge Placement Errors (EPE) from layout polygon topologies, replacing slow numerical litho simulations.</p>
+    </div>
+    <dl class="nt-stats">
+      <div><dt>Prediction heads</dt><dd><b data-count="5">5</b><i>Decoupled</i></dd></div>
+      <div><dt>Geometry formulation</dt><dd><b>E(n)</b><i>Equivariant</i></dd></div>
+      <div><dt>Loss function</dt><dd><b>Uncertainty</b><i>Weighted</i></dd></div>
+    </dl>
+    <figure class="nt-fig" data-diagram="gnn">
+      <figcaption><span class="dotred"></span>Geometric deep learning lithography pipeline</figcaption>
+      <div class="nt-scroll"><svg viewBox="0 0 1200 300" class="dg" role="img" aria-label="GNN-T pipeline: Layout OASIS to graph extraction, EGNN message passing, transformer, Fourier optics priors, and 5 decoupled prediction heads"></svg></div>
+    </figure>
+    <p class="nt-note">Evaluated on 2D scalar Fourier-optics simulation graphs to accelerate optical proximity correction (OPC) exploration with sub-nanometer edge placement accuracy.</p>
+    <a class="pill" href="https://github.com/ALLENJOE-A/GNN-T_Edge-Error-Prediction-for-Computational-Lithography" target="_blank" rel="noopener">Open GNN-T on GitHub</a>
+  </article>
+
+</section>
+
+<!-- ADDITIONAL CASE STUDIES -->
+<section class="hy" id="case-studies" style="border-top:1px solid #1f242d;padding-top:60px;">
+  <div class="hy__head"><span class="chap__no">[ EVIDENCE ]</span><span>Verified Research & Engineering Case Studies</span></div>
+  <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:24px;margin-top:32px;">
+    
+    <div style="background:#0e1117;border:1px solid #232834;padding:24px;border-radius:6px;">
+      <h4 style="color:#00D9FF;font-size:18px;margin:0 0 8px;">FE-DGDM-JLTFET Biosensor (TCAD)</h4>
+      <p style="color:#8b949e;font-size:13px;line-height:1.6;margin:0 0 16px;">Synopsys Sentaurus TCAD modeling of ferroelectric negative-capacitance junctionless TFET for label-free biomolecular detection. $I_{on} = 0.804\text{ mA}$, $I_{on}/I_{off} = 7.24 \times 10^8$, 18.14% sensitivity.</p>
+      <a class="pill" href="https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD" target="_blank" rel="noopener" style="display:inline-block;">Open TCAD Biosensor Repo</a>
     </div>
 
-    <!-- Header Navigation -->
-    <header class="cinematic-header">
-      <a href="#hero" class="brand-badge" aria-label="Allen Joe A - Return to top">
-        <div class="brand-die-icon" aria-hidden="true"></div>
-        <div class="brand-text-block">
-          <span class="brand-name">ALLEN JOE A</span>
-          <span class="brand-tag">VLSI &middot; ASIC &middot; TCAD</span>
-        </div>
-      </a>
-      <nav class="header-links" aria-label="Primary navigation">
-        <a href="#device" class="nav-link">TCAD</a>
-        <a href="#gate" class="nav-link">RTL/BIST</a>
-        <a href="#metal" class="nav-link">Physical Design</a>
-        <a href="#package" class="nav-link">Systems</a>
-        <a href="#timeline" class="nav-link">Timeline</a>
-        <a href="#tapeout" class="cta-header-btn">Tape-Out &rarr;</a>
-      </nav>
-    </header>
+    <div style="background:#0e1117;border:1px solid #232834;padding:24px;border-radius:6px;">
+      <h4 style="color:#00D9FF;font-size:18px;margin:0 0 8px;">DG Source-Pocket Vertical TFET</h4>
+      <p style="color:#8b949e;font-size:13px;line-height:1.6;margin:0 0 16px;">Steep subthreshold swing (34.2 mV/dec) device optimization combining GaSb/GaAsSb heterojunction source pocket and high-k dielectrics in Sentaurus TCAD.</p>
+      <a class="pill" href="https://github.com/ALLENJOE-A/DG-Source-Pocket-Engineered-Vertical-TFET" target="_blank" rel="noopener" style="display:inline-block;">Open Vertical TFET Repo</a>
+    </div>
 
-    <!-- Fixed Layer Rail -->
-    <nav class="layer-rail" aria-label="Chip layer depth navigation">
-      <button type="button" class="layer-rail-item active" data-layer-idx="0" aria-label="Navigate to Substrate layer">
-        <span class="layer-rail-label">M0 &middot; SUBSTRATE</span>
-        <span class="layer-rail-dot" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="layer-rail-item" data-layer-idx="1" aria-label="Navigate to Wells layer">
-        <span class="layer-rail-label">W &middot; WELLS</span>
-        <span class="layer-rail-dot" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="layer-rail-item" data-layer-idx="2" aria-label="Navigate to Device TCAD layer">
-        <span class="layer-rail-label">DEV &middot; TCAD</span>
-        <span class="layer-rail-dot" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="layer-rail-item" data-layer-idx="3" aria-label="Navigate to Gate RTL layer">
-        <span class="layer-rail-label">G &middot; RTL/BIST</span>
-        <span class="layer-rail-dot" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="layer-rail-item" data-layer-idx="4" aria-label="Navigate to Metal Physical Design layer">
-        <span class="layer-rail-label">M1-M4 &middot; GDSII</span>
-        <span class="layer-rail-dot" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="layer-rail-item" data-layer-idx="5" aria-label="Navigate to Embedded Systems layer">
-        <span class="layer-rail-label">SYS &middot; PACKAGE</span>
-        <span class="layer-rail-dot" aria-hidden="true"></span>
-      </button>
-      <button type="button" class="layer-rail-item" data-layer-idx="6" aria-label="Navigate to Tape-out layer">
-        <span class="layer-rail-label">PKG &middot; BGA</span>
-        <span class="layer-rail-dot" aria-hidden="true"></span>
-      </button>
-    </nav>
+    <div style="background:#0e1117;border:1px solid #232834;padding:24px;border-radius:6px;">
+      <h4 style="color:#00D9FF;font-size:18px;margin:0 0 8px;">Mode-Switching Flight PID (Innovus P&R)</h4>
+      <p style="color:#8b949e;font-size:13px;line-height:1.6;margin:0 0 16px;">Silicon Dawn VLSI Hackathon finalist. Cascaded attitude and rate copter PID controller synthesized in Cadence Genus and physically routed in Innovus (50 MHz, 0 DRC violations).</p>
+      <a class="pill" href="https://github.com/ALLENJOE-A/Mode_Switching-Flight_control-Pid_Controller-" target="_blank" rel="noopener" style="display:inline-block;">Open Flight PID Repo</a>
+    </div>
 
-    <!-- Main Scrollytelling DOM Container -->
-    <main id="main-content" class="scroll-track">
-      <!-- 0. HERO SECTION -->
-      <section id="hero" class="scene-section">
-        <article class="glass-content-panel">
-          <div class="panel-header-badge">M0 &middot; SUBSTRATE LEVEL</div>
-          <h1 class="section-h1">From device physics to <em>GDSII</em>.</h1>
-          <p class="section-lede">
-            I am Allen Joe A, an Electronics &amp; VLSI Engineering student at VIT Chennai. I design and optimize semiconductor architectures from quantum tunnel-FET TCAD simulation through RTL design and fault-tolerant BIST to full physical layout sign-off in Cadence Innovus.
-          </p>
-          <div class="stats-counter-grid">
-            <div class="stat-item">
-              <span class="stat-value" data-count="99.8980">99.8980</span>
-              <span class="stat-label">% BIST Fault Coverage</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value copper" data-count="344">344</span>
-              <span class="stat-label">&times; VTFET Current Gain</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value" data-count="0">0</span>
-              <span class="stat-label">DRC Violations (Innovus)</span>
-            </div>
-          </div>
-          <div class="panel-cta-group">
-            <a href="#device" class="btn-primary">Descend into Die &darr;</a>
-            <a href="https://github.com/ALLENJOE-A" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub &rarr;</a>
-            <a href="https://www.linkedin.com/in/allen-joe-a-36069831b/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn &rarr;</a>
-          </div>
-        </article>
-      </section>
+    <div style="background:#0e1117;border:1px solid #232834;padding:24px;border-radius:6px;">
+      <h4 style="color:#00D9FF;font-size:18px;margin:0 0 8px;">Digital Oscilloscope — STM32</h4>
+      <p style="color:#8b949e;font-size:13px;line-height:1.6;margin:0 0 16px;">Real-time dual interleaved ADC sampling with continuous DMA circular buffering and waveform visualization on an ILI9341 SPI display with hardware trigger detection.</p>
+      <a class="pill" href="https://github.com/ALLENJOE-A/Digital-Oscilloscope-STM32" target="_blank" rel="noopener" style="display:inline-block;">Open STM32 Scope Repo</a>
+    </div>
 
-      <!-- 1. DESCENT PEEL CUE -->
-      <section id="descent" class="scene-section">
-        <article class="glass-content-panel">
-          <div class="panel-header-badge">W &middot; INTERCONNECT &amp; WELL STACK</div>
-          <h2 class="section-h2">Peeling through <em>four metal layers</em>.</h2>
-          <p class="section-lede">
-            Diving past M4 power redistribution rails, orthogonal M3 clock spines, and M2/M1 signal buses into the active silicon wells. As the camera descends, dielectric passivation dissolves to expose the quantum device boundary.
-          </p>
-          <p class="panel-header-badge" style="color: var(--color-copper);">ACTIVE DOMAIN: ATOMIC TCAD CHANNEL</p>
-        </article>
-      </section>
+  </div>
+</section>
 
-      <!-- 2. DEVICE PHYSICS (TCAD) -->
-      <section id="device" class="scene-section">
-        <article class="glass-content-panel">
-          <div class="panel-header-badge">DEV &middot; QUANTUM TCAD SIMULATION</div>
-          <h2 class="section-h2">FE-DGDM-JLTFET <em>Biosensor</em> &amp; VTFET.</h2>
-          <p class="section-lede">
-            Simulated in Synopsys Sentaurus (SDE/SDevice) with non-local Hurkx Band-to-Band Tunneling (BTBT) and 128-bit precision math. Engineered for label-free MDA-MB-231 breast cancer detection and steep sub-60mV subthreshold swing. Supervised by Dr. Lakshmi B at CNVD, VIT Chennai.
-          </p>
-          <div class="stats-counter-grid">
-            <div class="stat-item">
-              <span class="stat-value" data-count="0.804">0.804</span>
-              <span class="stat-label">mA (Ion Current)</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value" data-count="18.137">18.137</span>
-              <span class="stat-label">% Current Sensitivity</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value copper" data-count="34.2">34.2</span>
-              <span class="stat-label">mV/dec (Subthreshold Swing)</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value" data-count="7.24">7.24 &times; 10⁸</span>
-              <span class="stat-label">Ion / Ioff Ratio (@30nm)</span>
-            </div>
-          </div>
-          <!-- Clickable Lightbox Thumbnails -->
-          <div class="glass-figures-row">
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/biosensor_device_structure.webp"
-                 data-lightbox-title="FE-DGDM-JLTFET Device Architecture"
-                 data-lightbox-caption="Synopsys Sentaurus 2D/3D structural mesh showing inverted-T nanocavity, ferroelectric oxide, and doping modulation."
-                 data-lightbox-category="TCAD Mesh"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD">
-              <img src="./assets/real/biosensor_device_structure.webp" alt="TCAD biosensor device structure" loading="lazy" />
-              <div class="figure-card-caption">Device Mesh Architecture</div>
-            </div>
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/biosensor_k_sweep.webp"
-                 data-lightbox-title="Id-Vgs Transfer Characteristics across K-Sweeps"
-                 data-lightbox-caption="Transfer curve shifting as dielectric constant K is swept from 1 to 22 for MDA-MB-231 biomolecule detection."
-                 data-lightbox-category="Electrical Curves"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD">
-              <img src="./assets/real/biosensor_k_sweep.webp" alt="Id-Vgs transfer characteristics" loading="lazy" />
-              <div class="figure-card-caption">K-Sweep Id-Vgs Curves</div>
-            </div>
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/vtfet_energy_band.webp"
-                 data-lightbox-title="Energy Band Alignment under Bias"
-                 data-lightbox-caption="Conduction and valence band profiles showing quantum band-to-band tunneling (BTBT) enabled by 5nm GaAsSb pocket."
-                 data-lightbox-category="Energy Bands"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/DG-Source-Pocket-Engineered-Vertical-TFET">
-              <img src="./assets/real/vtfet_energy_band.webp" alt="VTFET energy band diagram" loading="lazy" />
-              <div class="figure-card-caption">Energy Band Bending</div>
-            </div>
-          </div>
-          <div class="panel-cta-group">
-            <a href="https://github.com/ALLENJOE-A/FE-DGDM-JLTFET-Biosensor-TCAD" target="_blank" rel="noopener noreferrer" class="btn-primary">Biosensor Repo &rarr;</a>
-            <a href="https://github.com/ALLENJOE-A/DG-Source-Pocket-Engineered-Vertical-TFET" target="_blank" rel="noopener noreferrer" class="btn-secondary">VTFET Repo &rarr;</a>
-          </div>
-        </article>
-      </section>
+<!-- 07 RULES -->
+<section class="chap rules" id="rules">
+  <div class="marquee" aria-hidden="true"><div class="marquee__track"><span>Engineering Principles</span><i></i><span>Engineering Principles</span><i></i><span>Engineering Principles</span><i></i><span>Engineering Principles</span><i></i><span>Engineering Principles</span><i></i></div></div>
+  <div class="rules__intro">
+    <span class="chap__no">[ 07 / 09 ]</span>
+    <p>Mine, alternating with the giants who said it first. Each of mine points to the open-source repository that keeps me honest.</p>
+    <figure class="rules__painting"><img src="assets/img/painting.webp" alt="" width="900" height="1200" loading="lazy"></figure>
+  </div>
+  <div class="rules__panel">
+    <ol class="rules__list" id="rulesList">
+      <li data-card="dma"><span class="no">001</span><span class="t">Bit-exact or it didn't happen<b>.</b></span></li>
+      <li data-card="dijkstra"><span class="no">002</span><span class="t">Program testing can be used to show the presence of bugs, but never to show their absence<b>!</b></span></li>
+      <li data-card="adpll"><span class="no">003</span><span class="t">Verify before you state<b>.</b></span></li>
+      <li data-card="feynman"><span class="no">004</span><span class="t">The first principle is that you must not fool yourself, and you are the easiest person to fool<b>.</b></span></li>
+      <li data-card="gh"><span class="no">005</span><span class="t">Every claim has a repo<b>.</b></span></li>
+      <li data-card="tcad"><span class="no">006</span><span class="t">Physics sets the floor, architecture sets the ceiling<b>.</b></span></li>
+      <li data-card="newton"><span class="no">007</span><span class="t">If I have seen further it is by standing on the shoulders of giants<b>.</b></span></li>
+      <li data-card="me"><span class="no">008</span><span class="t">One standard, every detail<b>.</b></span></li>
+    </ol>
+    <div class="card" id="ruleCard" aria-live="polite">
+      <div class="card__img" id="cardImg"></div>
+      <p class="card__cap" id="cardCap"></p>
+    </div>
+  </div>
+</section>
 
-      <!-- 3. GATE ARCHITECTURE & BIST -->
-      <section id="gate" class="scene-section">
-        <article class="glass-content-panel">
-          <div class="panel-header-badge">G &middot; RTL ARCHITECTURE &amp; DFT</div>
-          <h2 class="section-h2">Low-Power <em>BIST</em> for 16-bit MAC.</h2>
-          <p class="section-lede">
-            Synthesizable IEEE 1364-2001 Verilog implementation of a self-testing Multiply-Accumulate unit with dual 16-bit LFSR pattern generators (LFSR-A seeded 0xACE1, LFSR-B seeded 0x1B3D), MISR response compaction, and clock-gated low-power controller. Synthesized in Cadence Genus 21.1 and verified across 1,960 stuck-at faults in Cadence Incisive.
-          </p>
-          <div class="stats-counter-grid">
-            <div class="stat-item">
-              <span class="stat-value" data-count="99.8980">99.8980</span>
-              <span class="stat-label">% Stuck-at Fault Coverage</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value copper" data-count="1960">1,960</span>
-              <span class="stat-label">Injected Faults Tested</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value" data-count="100">100</span>
-              <span class="stat-label">MHz Timing Closure</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value" data-count="6">6</span>
-              <span class="stat-label">Architectures Evaluated</span>
-            </div>
-          </div>
-          <div class="glass-figures-row">
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/mac_16_genus_schematic.webp"
-                 data-lightbox-title="Cadence Genus 21.1 Gate-Level Schematic"
-                 data-lightbox-caption="Mapped logic gates of the 16-bit MAC unit with integrated clock gating and operand isolation."
-                 data-lightbox-category="Cadence Schematic"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/Low-Power-MAC-BIST-PPA-Fault-Coverage">
-              <img src="./assets/real/mac_16_genus_schematic.webp" alt="Cadence Genus MAC schematic" loading="lazy" />
-              <div class="figure-card-caption">Genus Mapped Schematic</div>
-            </div>
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/fault_coverage_summary.webp"
-                 data-lightbox-title="Fault Simulation Terminal Run Log"
-                 data-lightbox-caption="Cadence Incisive gate-level fault simulation run confirming 99.8980% fault coverage."
-                 data-lightbox-category="Fault Coverage"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/Low-Power-MAC-BIST-PPA-Fault-Coverage">
-              <img src="./assets/real/fault_coverage_summary.webp" alt="Fault coverage summary log" loading="lazy" />
-              <div class="figure-card-caption">99.8980% Fault Log</div>
-            </div>
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/ppa_comparison_table.webp"
-                 data-lightbox-title="PPA Benchmark Comparison Table"
-                 data-lightbox-caption="Power, performance, and area tradeoffs across candidate low-power BIST schemes."
-                 data-lightbox-category="PPA Tradeoffs"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/Low-Power-MAC-BIST-PPA-Fault-Coverage">
-              <img src="./assets/real/ppa_comparison_table.webp" alt="PPA comparison table" loading="lazy" />
-              <div class="figure-card-caption">PPA Comparison Table</div>
-            </div>
-          </div>
-          <div class="panel-cta-group">
-            <a href="https://github.com/ALLENJOE-A/Low-Power-MAC-BIST-PPA-Fault-Coverage" target="_blank" rel="noopener noreferrer" class="btn-primary">View BIST Repository &rarr;</a>
-          </div>
-        </article>
-      </section>
+<!-- 08 THE BUG -->
+<section class="story" id="story">
+  <div class="story__bg" aria-hidden="true"><canvas id="storyWave"></canvas><img src="assets/img/chrome-lens.webp" alt="" width="720" height="720" loading="lazy"></div>
+  <div class="story__inner">
+    <div class="hy__head"><span class="chap__no">[ 08 / 09 ]</span><span>The bug hunt</span></div>
+    <h2 class="h1x story__title">The bug the waveforms caught.</h2>
+    <div class="story__text">
+      <p data-lit>When the 16-bit MAC processing array first ran in RTL, 124 of 144 convolution outputs disagreed with the Python golden model.</p>
+      <p data-lit>The arithmetic was right. The multiplier trees were correct. The timing was not.</p>
+      <p data-lit>The ROM reads and controller address outputs were both registered, so MAC enable had to lag the tap index by two clock cycles. I had given it one.</p>
+      <p data-lit>I tracked it down by diffing simulation waveforms against per-tap golden accumulator values, clock cycle by clock cycle.</p>
+      <p data-lit>One more delay stage, and Conv1 matched bit-for-bit. Then Conv2. Then the entire datapath: 20 of 20 test vectors bit-exact from input activations to final logits.</p>
+      <p class="story__end" data-lit>The recipe never changes: a golden model, a waveform trace, and the patience to read both.</p>
+    </div>
+    <a class="btn" href="https://github.com/ALLENJOE-A/Low-Power-MAC-BIST-PPA-Fault-Coverage" target="_blank" rel="noopener">Read it in the repo</a>
+  </div>
+</section>
 
-      <!-- 4. METAL PHYSICAL DESIGN (RTL-TO-GDS) -->
-      <section id="metal" class="scene-section">
-        <article class="glass-content-panel">
-          <div class="panel-header-badge">M1-M4 &middot; ASIC PHYSICAL DESIGN</div>
-          <h2 class="section-h2">PS-02 PID <em>RTL-to-GDS</em> &amp; Maven Silicon.</h2>
-          <p class="section-lede">
-            Mode-Switching Copter Flight Control PID hardware developed for the Silicon Dawn VLSI Hackathon 2026 (Problem Statement PS-02 by Sudarshana Semiconductors). Implemented in Verilog-2001 with signed Q8.8 arithmetic, cascaded attitude/rate loops, anti-windup, and bumpless transfer. Synthesized in Cadence Genus and physically routed in Cadence Innovus.
-          </p>
-          <div class="stats-counter-grid">
-            <div class="stat-item">
-              <span class="stat-value" style="font-size: 1.3rem;">446 &times; 444</span>
-              <span class="stat-label">µm Core Area</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value" data-count="50">50</span>
-              <span class="stat-label">MHz Timing Closure</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value copper" data-count="0">0</span>
-              <span class="stat-label">DRC Violations</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value" data-count="0">0</span>
-              <span class="stat-label">Connectivity Violations</span>
-            </div>
-          </div>
-          <div class="glass-figures-row">
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/pid_final_layout.webp"
-                 data-lightbox-title="Cadence Innovus Final GDSII Layout with Fillers"
-                 data-lightbox-caption="Complete core layout showing power distribution ring, standard cell placement rows, and multi-layer copper interconnects."
-                 data-lightbox-category="Cadence Innovus P&R"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/Mode_Switching-Flight_control-Pid_Controller-">
-              <img src="./assets/real/pid_final_layout.webp" alt="Innovus final GDS layout" loading="lazy" />
-              <div class="figure-card-caption">Final Innovus Layout</div>
-            </div>
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/pid_drc_clean.webp"
-                 data-lightbox-title="Verify DRC & Connectivity Clean Report"
-                 data-lightbox-caption="Sign-off verification log confirming 0 DRC violations and 0 connectivity errors across the 446.31 × 444.28 µm core."
-                 data-lightbox-category="Sign-off Verification"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/Mode_Switching-Flight_control-Pid_Controller-">
-              <img src="./assets/real/pid_drc_clean.webp" alt="DRC clean report" loading="lazy" />
-              <div class="figure-card-caption">Zero DRC Clean Sweep</div>
-            </div>
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/pid_cts.webp"
-                 data-lightbox-title="Clock Tree Synthesis (CTS) Visualization"
-                 data-lightbox-caption="Cadence Innovus post-CTS clock skew and tree routing across cascaded PID processing blocks."
-                 data-lightbox-category="Clock Tree Synthesis"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/Mode_Switching-Flight_control-Pid_Controller-">
-              <img src="./assets/real/pid_cts.webp" alt="Clock tree synthesis" loading="lazy" />
-              <div class="figure-card-caption">Clock Tree Synthesis (CTS)</div>
-            </div>
-          </div>
-          <div class="todo-badge">
-            &#9888; Maven Silicon Physical Design: SkyWater 130nm &amp; QFLOW SPI Layout GDS screenshot pending author upload.
-          </div>
-          <div class="panel-cta-group">
-            <a href="https://github.com/ALLENJOE-A/Mode_Switching-Flight_control-Pid_Controller-" target="_blank" rel="noopener noreferrer" class="btn-primary">PS-02 Repository &rarr;</a>
-          </div>
-        </article>
-      </section>
+<!-- 09 FAQ -->
+<section class="faq" id="faq">
+  <div class="faq__inner">
+    <div class="chap__head chap__head--ink"><span class="chap__no">[ 09 / 09 ]</span><span class="chap__name">FAQ</span></div>
+    <div class="faq__grid">
+      <h2 class="faq__title">You've got questions.<br>I've got answers.</h2>
+      <div class="faq__qs">
+        <div class="q"><span class="q__no">001</span><h3>What roles are you looking for?</h3><p>ASIC Physical Design, Digital RTL Design, VLSI Verification / DFT, and TCAD Device Engineering internships and full-time opportunities.</p></div>
+        <div class="q"><span class="q__no">002</span><h3>When do you graduate?</h3><p>Graduating in 2028 with Bachelor of Technology (B.Tech) in Electronics & VLSI Engineering from School of Electronics Engineering (SENSE), Vellore Institute of Technology (VIT), Chennai.</p></div>
+        <div class="q"><span class="q__no">003</span><h3>Where are you located?</h3><p>Chennai, India — open to on-site, hybrid, and relocation opportunities worldwide.</p></div>
+        <div class="q"><span class="q__no">004</span><h3>What EDA tools do you use?</h3><p>Cadence Genus, Cadence Innovus, Synopsys Sentaurus (SDE/SDevice), OpenROAD, OpenLane, SkyWater 130nm, Yosys, ModelSim, and PyTorch.</p></div>
+        <div class="q"><span class="q__no">005</span><h3>What are your key research domains?</h3><p>Steep-slope sub-60mV Tunnel FETs (TFETs), negative capacitance ferroelectric biosensors (FE-DGDM-JLTFET), and Graph Neural Networks for computational lithography.</p></div>
+        <div class="q"><span class="q__no">006</span><h3>Can I inspect the source code?</h3><p>Every featured project is a public GitHub repository with reproducible simulation logs and synthesis scripts.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- 5. PACKAGE & SYSTEMS -->
-      <section id="package" class="scene-section">
-        <article class="glass-content-panel">
-          <div class="panel-header-badge">SYS &middot; EMBEDDED SYSTEMS &amp; AI IN EDA</div>
-          <h2 class="section-h2">Speaker Diarization, <em>GNN Litho</em> &amp; STM32.</h2>
-          <p class="section-lede">
-            Deploying AI pipelines to edge hardware and accelerating physical lithography verification. Includes real-time speaker diarization on Raspberry Pi 5 with SpeechBrain ECAPA-TDNN, GNN-T transformer edge placement error forecasting, and dual ADC interleaved sampling on STM32.
-          </p>
-          <div class="glass-figures-row">
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/stm32_oscilloscope.webp"
-                 data-lightbox-title="STM32F103C8T6 Hardware Digital Oscilloscope"
-                 data-lightbox-caption="Real hardware photograph: dual ADC interleaved DMA sampling displayed in real time on an ILI9341 320×240 TFT."
-                 data-lightbox-category="Hardware Photograph"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/Digital-Oscilloscope-STM32">
-              <img src="./assets/real/stm32_oscilloscope.webp" alt="STM32 hardware oscilloscope" loading="lazy" />
-              <div class="figure-card-caption">STM32 Hardware Scope</div>
-            </div>
-            <div class="glass-figure-card" 
-                 data-lightbox-src="./assets/real/gnn_model_layers.webp"
-                 data-lightbox-title="GNN-T Geometric Deep Learning Architecture"
-                 data-lightbox-caption="E(n)-Equivariant Graph Neural Network with Transformer self-attention for sub-resolution edge error prediction."
-                 data-lightbox-category="GNN Architecture"
-                 data-lightbox-repo="https://github.com/ALLENJOE-A/GNN-T_Edge-Error-Prediction-for-Computational-Lithography">
-              <img src="./assets/real/gnn_model_layers.webp" alt="GNN model layers" loading="lazy" />
-              <div class="figure-card-caption">GNN-T Architecture</div>
-            </div>
-          </div>
-          <div class="todo-badge">
-            &#9888; Raspberry Pi 5 Diarization: Hardware photo with USB mic array and 3.5&quot; 480&times;320 LCD to be supplied by author.
-          </div>
-          <div class="panel-cta-group">
-            <a href="https://github.com/ALLENJOE-A/speaker-diarization-pi5" target="_blank" rel="noopener noreferrer" class="btn-primary">Pi 5 Thesis &rarr;</a>
-            <a href="https://github.com/ALLENJOE-A/Digital-Oscilloscope-STM32" target="_blank" rel="noopener noreferrer" class="btn-secondary">STM32 Repo &rarr;</a>
-            <a href="https://github.com/ALLENJOE-A/GNN-T_Edge-Error-Prediction-for-Computational-Lithography" target="_blank" rel="noopener noreferrer" class="btn-secondary">GNN Litho &rarr;</a>
-          </div>
-        </article>
-      </section>
+<!-- CLOSING -->
+<section class="sign" id="contact">
+  <figure class="quote">
+    <blockquote>For a successful technology, reality must take precedence over public relations, for nature cannot be fooled.</blockquote>
+    <figcaption>Richard P. Feynman · Rogers Commission Report, Appendix F, 1986</figcaption>
+  </figure>
+  <img class="sign__obj float" src="assets/img/chrome-iron.webp" alt="" width="720" height="720" loading="lazy">
+  <div class="sign__rows" aria-hidden="true">
+    <div class="sign__row"><span>Shall we talk?</span><a tabindex="-1" href="mailto:allenjoe.a2024@vitstudent.ac.in">Here</a><span>Shall we talk?</span><a tabindex="-1" href="mailto:allenjoe.a2024@vitstudent.ac.in">Here</a></div>
+    <div class="sign__row sign__row--rev"><span>Shall we talk?</span><a tabindex="-1" href="mailto:allenjoe.a2024@vitstudent.ac.in">Here</a><span>Shall we talk?</span><a tabindex="-1" href="mailto:allenjoe.a2024@vitstudent.ac.in">Here</a></div>
+  </div>
+  <h2 class="sr">Shall we talk?</h2>
+  <a class="sign__mail" href="mailto:allenjoe.a2024@vitstudent.ac.in">allenjoe.a2024@vitstudent.ac.in</a>
+  <ul class="contact__links">
+    <li><a href="https://www.linkedin.com/in/allen-joe-a-36069831b/" target="_blank" rel="noopener">LinkedIn</a></li>
+    <li><a href="https://github.com/ALLENJOE-A" target="_blank" rel="noopener">GitHub</a></li>
+    <li><a href="assets/Allen_Joe_A_Resume.pdf" download>Resume (PDF)</a></li>
+  </ul>
+  <footer class="foot">
+    <p>© 2026 Allen Joe A · Chennai, India</p>
+    <div class="foot__credits">
+      <details><summary>Licensing, Credits & Open-Source Attribution</summary>
+        <p>Original VLSI project content, RTL designs, verification testbenches, and modifications copyright © 2026 Allen Joe A (MIT License). Underlying visual scaffolding and 3D teardown concepts adapted from public portfolio by Chinmay Mahananda under GitHub public repository terms with full attribution. 3D WebGL engine: Three.js (MIT). Smooth scrolling: Lenis (MIT). Fonts: Inter Tight (SIL OFL 1.1) and JetBrains Mono (SIL OFL 1.1). Historical portraits: Isaac Newton (Public Domain), Richard Feynman (Public Domain), Edsger W. Dijkstra (CC BY-SA 3.0 via Wikimedia Commons). EDA tool logos (Cadence, Synopsys, SkyWater, OpenROAD, Python, etc.) belong to their respective owners.</p>
+      </details>
+    </div>
+  </footer>
+</section>
 
-      <!-- 6. TIMELINE -->
-      <section id="timeline" class="scene-section">
-        <article class="glass-content-panel">
-          <div class="panel-header-badge">TIMELINE &middot; SILICON MILESTONES</div>
-          <h2 class="section-h2">Engineering <em>Trajectory</em>.</h2>
-          <div style="display: flex; flex-direction: column; gap: 1.5rem; margin-top: 1.5rem;">
-            <div style="border-left: 2px solid var(--color-lime); padding-left: 1.25rem;">
-              <span class="panel-header-badge" style="margin-bottom: 0.25rem;">2023 &ndash; 2027 &middot; B.TECH DEGREE</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: var(--color-white);">Electronics &amp; VLSI Engineering</h3>
-              <p style="font-size: 0.88rem; color: var(--color-muted); margin-top: 0.25rem;">School of Electronics Engineering (SENSE), VIT Chennai. Specialized in ASIC physical design, RTL design, and device physics.</p>
-            </div>
-            <div style="border-left: 2px solid var(--color-copper); padding-left: 1.25rem;">
-              <span class="panel-header-badge" style="color: var(--color-copper); margin-bottom: 0.25rem;">MAY &ndash; JUL 2026 &middot; RESEARCH INTERNSHIP</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: var(--color-white);">TCAD Biosensor Modeling (CNVD)</h3>
-              <p style="font-size: 0.88rem; color: var(--color-muted); margin-top: 0.25rem;">Center for Nanotechnology and VLSI, VIT Chennai. Guide: Dr. Lakshmi B. Modeled FE-DGDM-JLTFET for MDA-MB-231 cell detection.</p>
-            </div>
-            <div style="border-left: 2px solid var(--color-lime); padding-left: 1.25rem;">
-              <span class="panel-header-badge" style="margin-bottom: 0.25rem;">MAY 2026 &middot; INDUSTRY INTERNSHIP</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: var(--color-white);">VLSI Physical Design Intern &middot; Maven Silicon</h3>
-              <p style="font-size: 0.88rem; color: var(--color-muted); margin-top: 0.25rem;">Yosys synthesis on SkyWater 130nm and QFLOW RTL-to-GDS physical implementation of SPI peripheral.</p>
-            </div>
-            <div style="border-left: 2px solid var(--color-cyan); padding-left: 1.25rem;">
-              <span class="panel-header-badge" style="color: var(--color-cyan); margin-bottom: 0.25rem;">2026 &middot; HACKATHON FINALIST</span>
-              <h3 style="font-family: var(--font-display); font-size: 1.15rem; color: var(--color-white);">Silicon Dawn VLSI Hackathon (PS-02)</h3>
-              <p style="font-size: 0.88rem; color: var(--color-muted); margin-top: 0.25rem;">Sudarshana Semiconductors problem statement. Designed mode-switching PID flight controller achieving 50 MHz closure with 0 DRC errors.</p>
-            </div>
-          </div>
-        </article>
-      </section>
-
-      <!-- 7. TAPE-OUT SIGN-OFF & CONTACT -->
-      <section id="tapeout" class="scene-section">
-        <article class="glass-content-panel">
-          <div class="panel-header-badge">PKG &middot; BGA PACKAGING &amp; SIGN-OFF</div>
-          <h2 class="section-h1">Ready for <em>tape-out</em>? Let's talk.</h2>
-          <p class="section-lede">
-            Whether your team is designing beyond-CMOS steep subthreshold devices, writing robust SystemVerilog RTL with low-power BIST, or closing timing on complex ASIC floorplans in Cadence Innovus, I am ready to contribute.
-          </p>
-          <div class="stats-counter-grid">
-            <div class="stat-item">
-              <span class="stat-value" style="font-size: 1.25rem;">Chennai, India</span>
-              <span class="stat-label">Location / Relocation Ready</span>
-            </div>
-            <div class="stat-item">
-              <span class="stat-value copper" style="font-size: 1.25rem;">Graduating 2027</span>
-              <span class="stat-label">B.Tech Electronics &amp; VLSI</span>
-            </div>
-          </div>
-          <div class="panel-cta-group">
-            <a href="mailto:allenjoe.a2024@vitstudent.ac.in" class="btn-primary">allenjoe.a2024@vitstudent.ac.in &rarr;</a>
-            <a href="https://www.linkedin.com/in/allen-joe-a-36069831b/" target="_blank" rel="noopener noreferrer" class="btn-secondary">LinkedIn Profile &rarr;</a>
-            <a href="https://github.com/ALLENJOE-A" target="_blank" rel="noopener noreferrer" class="btn-secondary">GitHub Profile &rarr;</a>
-            <a href="./assets/real/README.md" target="_blank" class="btn-secondary">Asset Verification Log</a>
-          </div>
-        </article>
-      </section>
-    </main>
-
-    <!-- Application Initialization Script -->
-    <script type="module" src="./src/main.ts"></script>
-  </body>
+</main>
+<script src="assets/vendor/three.min.js" defer></script>
+<script src="assets/vendor/lenis.min.js" defer></script>
+<script src="chip.js" defer></script>
+<script src="nothing.js" defer></script>
+<script src="ideas-lite.js" defer></script>
+<script src="main.js" defer></script>
+<script src="honey.js" defer></script>
+<script type="module" src="./src/main.ts"></script>
+</body>
 </html>
