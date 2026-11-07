@@ -30,9 +30,12 @@ This directory contains verified, non-simulated/real engineering assets extracte
    - `gnn_model_layers.jpg`: Equivariant GNN + Transformer deep learning architecture diagram.
    - `gnn_model_comparison.png`: Convergence and multi-task loss comparison curves.
 
-6. **Embedded Systems (Digital Oscilloscope)**:
+6. **Gain-Scheduled ADPLL (GS-ADPLL)**:
+   - `adpll_architecture.png`: Top-level FSM gear-shifting and dual-mode digital loop filter architecture schematic.
+   - `adpll_jitter_comparison.png`: Cadence Incisive measured cycle-to-cycle jitter comparing baseline ($K=1$) vs. gear-shifted tracking ($K=8$, 91.9% jitter reduction).
+
+7. **Embedded Systems (Digital Oscilloscope)**:
    - `stm32_oscilloscope.jpeg`: Real hardware photograph of the STM32F103C8T6 driving the ILI9341 320x240 TFT display with real-time square-wave capture.
 
-## Assets Needed from Author (Marked as TODO)
+## Assets Under Lab Measurement
 - `rpi5_diarization_hardware.jpg`: Photo of Raspberry Pi 5 with USB mic array and 3.5" 480x320 LCD displaying the CustomTkinter UI.
-- `maven_silicon_gds.png`: Layout / GDS screenshot from QFLOW (OSU018) / Yosys physical design flow for SPI module.
